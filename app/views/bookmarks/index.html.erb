@@ -1,0 +1,21 @@
+<h1>
+  <% if @bookmarks.size > 1 %>
+    Your bookmarks
+  <% elsif @bookmarks.size == 1 %>
+    Your bookmark
+  <% else %>
+    You haven't bookmarked anything yet...
+  <% end %>
+</h1>
+
+<% @bookmarks.each do |bookmark| %>
+  <div class="my-bookmark my-3 rounded p-3">
+
+    <%# maybe render here a partial from views/nodes/ to show a node %>
+    
+    <%= bookmark.node.name %>
+    <%= bookmark.node.documentation %>
+
+    <%= link_to "Remove this bookmark", bookmark_path(bookmark), class: "btn btn-danger", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove this bookmark?" } %>
+  </div>
+<% end %>
