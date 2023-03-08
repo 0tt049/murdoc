@@ -1,4 +1,9 @@
 class BookmarksController < ApplicationController
+
+  def index
+    @bookmarks = Bookmark.where(user_id: current_user.id)
+  end
+
   def create
     @bookmark = Bookmark.new(bookmark_params)
     @node = Node.find(params[:node_id])
@@ -17,7 +22,7 @@ class BookmarksController < ApplicationController
     # redirect_to nodes_path, status: :see_other
   end
 
-  private
+  # private
 
   # def bookmark_params
   #   params.require(:bookmark).permit(:name, :description)
