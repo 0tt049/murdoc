@@ -1,5 +1,8 @@
 <h1>MURDOC</h1>
 
 <% @nodes.each do |node| %>
-  <%= node. %>
+  <h2><%= node.name %></h2>
+  <p>Category: <%= node.category %></p>
+  <p>Documentation: <%= node.documentation %></p>
+  <%= link_to "Home", root_path %>
 <% end %>
