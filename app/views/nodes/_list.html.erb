@@ -1,0 +1,7 @@
+<div data-search-nodes-target="list">
+  <% nodes.each do |node| %>
+    <h2><%= node.name %></h2>
+    <p>Category: <%= node.category %></p>
+    <p>Documentation: <%= node.documentation %></p>
+  <% end %>
+</div>
