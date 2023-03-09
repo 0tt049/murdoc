@@ -3,10 +3,11 @@
   border: 0;
   padding: 5px;
   height: 35vh;
-  background-color: white;
+  background-color: $light-background;
+  color: $light-text-color;
 }
 
 .card:hover {
-  box-shadow: 0 0 2px 0 rgb(0, 0, 0);
+  box-shadow: 0 0 1px 0 $light-hover;
   transition: 0.2s;
 }
