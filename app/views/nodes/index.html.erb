@@ -1,14 +1,21 @@
 <h1>MURDOC</h1>
 
-  <%= form_with url: nodes_path, method: :get, class: "d-flex" do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a node"
+<div data-controller="search-nodes">
+  <%= form_with url: nodes_path,
+    method: :get,
+    html: {class: "mb-4", data: {search_nodes_target: "form"}} do |f|
   %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
+    <%= f.text_field :query,
+      class: "form-control",
+      placeholder: "Search nodes",
+      value: params[:query],
+      data: {
+        search_nodes_target: "input",
+        action: "keyup->search-nodes#update"
+      }
+    %>
   <% end %>
-  
+
 <% @nodes.each do |node| %>
   <h2><%= node.name %></h2>
   <p>Category: <%= node.category %></p>
