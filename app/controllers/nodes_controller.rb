@@ -4,7 +4,7 @@ class NodesController < ApplicationController
   def index
     @nodes = Node.all
     if params[:query].present?
-      @nodes = @nodes.where("name ILIKE ?", "%#{params[:query]}%")
+      @nodes = @nodes.where("lower(name) LIKE :search OR lower(category) LIKE :search OR lower(documentation) LIKE :search", search: "%#{params[:query].downcase}%")
     end
 
     respond_to do |format|
