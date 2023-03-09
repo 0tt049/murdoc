@@ -1,0 +1,12 @@
+.card {
+  margin: 10px;
+  border: 0;
+  padding: 5px;
+  height: 35vh;
+  background-color: white;
+}
+
+.card:hover {
+  box-shadow: 0 0 2px 0 rgb(0, 0, 0);
+  transition: 0.2s;
+}
