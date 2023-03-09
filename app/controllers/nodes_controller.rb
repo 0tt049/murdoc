@@ -3,7 +3,6 @@ class NodesController < ApplicationController
 
   def index
     @nodes = Node.all
-
     if params[:query].present?
       @nodes = @nodes.where("name ILIKE ?", "%#{params[:query]}%")
     end
@@ -13,6 +12,7 @@ class NodesController < ApplicationController
       format.text { render partial: "nodes/list", locals: {nodes: @nodes}, formats: [:html] }
     end
   end
+
 
   private
 
