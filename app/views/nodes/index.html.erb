@@ -16,10 +16,7 @@
     %>
   <% end %>
 
-<% @nodes.each do |node| %>
-  <h2><%= node.name %></h2>
-  <p>Category: <%= node.category %></p>
-  <p>Documentation: <%= node.documentation %></p>
-<% end %>
+  <%= render partial: "list", locals: { nodes: @nodes } %>
+</div>
 
 <%= link_to "Home", root_path %>
