@@ -18,8 +18,4 @@ class Node < ApplicationRecord
   scope :classes, -> { where(category: CLASS_NODE) }
   scope :modules, -> { where(category: MODULE_NODE) }
   scope :methods, -> { where(category: METHOD_NODE) }
-
-  #Search
-  include PgSearch::Model
-  multisearchable against: [:name, :category, :documentation]
 end
