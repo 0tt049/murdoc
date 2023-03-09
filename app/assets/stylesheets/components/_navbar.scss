@@ -10,8 +10,12 @@
   left: 0;
   right: 0;
   z-index: 100;
-  height: 50px;
+  height: 72px;
   // margin-bottom: 10px;
+  .container-fluid {
+    padding: 0 80px;
+    margin-top: 22px;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -20,4 +24,8 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.nav-item i {
+  font-size: 22px;
 }
