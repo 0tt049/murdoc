@@ -1,13 +1,25 @@
-.card {
-  margin: 10px;
-  border: 0;
-  padding: 5px;
-  height: 35vh;
+.card-murdoc {
   background-color: $light-background;
-  color: $light-text-color;
+  margin: 20px 0 20px 0;
+  padding: 20px;
+  padding-bottom: 50px;
+  border: 0;
+  height: 45vh;
+  position: relative;
+  &:hover {
+    background-color: $light-detail;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    border: 1px;
+    transition: 0.2s;
+  }
 }
 
-.card:hover {
-  box-shadow: 0 0 1px 0 $light-hover;
-  transition: 0.2s;
+.inner-search {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
 }
