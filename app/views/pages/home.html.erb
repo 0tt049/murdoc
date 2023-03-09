@@ -5,25 +5,40 @@
     <%#= render "shared/searchbar" %>
     <div class='card-group'>
       <div class='card card-murdoc'>
-        <div class='inner-search'>
-
+        <div id='card-text'>
+          <%= render partial: "pages/list", locals: { nodes: @nodes.all } %>
+        </div>
+        <div class='inner-search' id='inner-search'>
+          <%= render "shared/searchbar" %>
         </div>
       </div>
       <div class='card card-murdoc'>
-       <div class='inner-search'>
-
-        </div></div>
+        <div id='card-text'>
+          <%= render partial: "pages/list", locals: { nodes: @nodes.all } %>
+        </div>
+        <div class='inner-search'>
+          <%= render "shared/searchbar" %>
+        </div>
+      </div>
       <div class='card card-murdoc'>
-       <div class='inner-search'>
-
-        </div></div>
+        <div id='card-text'>
+          <%= render partial: "pages/list", locals: { nodes: @nodes.all } %>
+        </div>
+        <div class='inner-search'>
+          <%= render "shared/searchbar" %>
+        </div>
+      </div>
       <div class='card card-murdoc'>
-       <div class='inner-search'>
-
-        </div></div>
+        <div id='card-text'>
+          <%= render partial: "pages/list", locals: { nodes: @nodes.all } %>
+        </div>
+        <div class='inner-search'>
+          <%= render "shared/searchbar" %>
+        </div>
+      </div>
     </div>
     <div class='card-doc'>
-      
+
     </div>
   </div>
 </div>

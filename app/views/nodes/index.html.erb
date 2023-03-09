@@ -1,5 +1,10 @@
 <h1>MURDOC</h1>
 
+<div data-controller="search-nodes">
+
 <%= render "shared/searchbar" %>
+
+  <%= render partial: "pages/list", locals: { nodes: @nodes } %>
+</div>
 
 <%= link_to "Home", root_path %>

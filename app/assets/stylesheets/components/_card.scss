@@ -1,8 +1,6 @@
 .card-murdoc {
   background-color: $light-background;
-  margin: 20px 0 20px 0;
-  padding: 20px;
-  padding-bottom: 50px;
+  margin-bottom: 20px;
   border: 0;
   height: 45vh;
   position: relative;
@@ -14,6 +12,12 @@
   }
 }
 
+  #card-text {
+  overflow: auto;
+  padding: 20px;
+  padding-top: 66px;
+}
+
 .inner-search {
   position: absolute;
   width: 100%;
@@ -21,5 +25,4 @@
   bottom: 0;
   left: 0;
   right: 0;
-
 }
