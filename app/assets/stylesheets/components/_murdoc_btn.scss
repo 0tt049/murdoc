@@ -15,4 +15,21 @@
     background-color: $light-hover;
     color: $light-text-hover;
   }
+  &:hover i {
+    animation: animate 3s linear 1;
+  }
+  @keyframes animate {
+    0%
+    {
+      transform: translate(5px,0);
+    }
+    50%
+    {
+      transform: translate(-5px,0);
+    }
+    100%
+    {
+      transform: translate(5px,0);
+    }
+  }
 }
