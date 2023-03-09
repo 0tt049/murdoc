@@ -77,4 +77,3 @@ group :test do
 end
 
 gem "ancestry"
-gem "pg_search"
