@@ -45,6 +45,7 @@
   }
 
   i:hover {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     box-shadow: 0 0 20px rgb(220, 0, 0);
     transition: .1s;
     // remove background color
@@ -53,8 +54,6 @@
     border: 2px solid $murdoc-red;
     border-radius: 50%;
     padding: 10px;
-    backdrop-filter: blur(17.7px);
-    backdrop-filter: blur(17.7px);
-    -webkit-backdrop-filter: blur(17.7px);
+    transform: translate(12px, -2px);
   }
 }
