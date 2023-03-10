@@ -14,12 +14,24 @@ class PagesController < ApplicationController
   end
 
   def tree
+    respond_to do |format|
+      format.html # Follow regular flow of Rails
+      format.text { render partial: "pages/tree", formats: [:html] }
+    end
   end
 
   def download
+    respond_to do |format|
+      format.html # Follow regular flow of Rails
+      format.text { render partial: "pages/download", formats: [:html] }
+    end
   end
 
   def about
+    respond_to do |format|
+      format.html # Follow regular flow of Rails
+      format.text { render partial: "pages/about", formats: [:html] }
+    end
   end
 
   private
