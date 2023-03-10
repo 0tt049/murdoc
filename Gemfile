@@ -78,3 +78,4 @@ end
 
 gem "ancestry"
 gem "colorize"
+gem "pg_search"
