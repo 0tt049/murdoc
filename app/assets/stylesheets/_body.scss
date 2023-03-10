@@ -1,4 +1,5 @@
 body {
+  position: relative;
   background-color: #fffae4;
   color: #2a231d;
   margin: 0;
@@ -7,3 +8,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+// * {
+//   box-sizing: border-box;
+// }
