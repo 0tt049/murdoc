@@ -4,7 +4,7 @@ def createChild(obj, parent = nil)
   else
     if obj.name == "BasicObject"
       node = Node.create("name" => obj.name, "category" => obj.class.name.downcase)
-      instance_method =
+      # instance_method =
     else
       node = parent.children.create("name" => obj.name, "category" => obj.class.name.downcase)
     end
