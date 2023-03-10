@@ -8,7 +8,6 @@
   width: 90px;
   overflow: hidden;
   align-items: center;
-  // transition: width 0,2s linear;
   background: rgba(220, 0, 0, 0.05);
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(17.7px);
@@ -22,15 +21,21 @@
 }
 
 .sidebar .logo {
-  // text-align: center;
   font-weight: bold;
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
+  align-items: center;
+  color: $murdoc-red;
   li {
     margin: 0;
     padding: 0;
   }
+}
+
+.sidebar:hover .logo {
+  // text-shadow: 0 0 20px rgba(220, 0, 0, 0.2);
+  color: #f20101;
 }
 
 .sidebar a {
@@ -39,7 +44,6 @@
   color: $murdoc-red
 }
 .side-item {
-  display: table;
   margin: 22px auto;
   span {
     display: none;
@@ -51,6 +55,7 @@
   flex-direction: column;
   align-items: center;
 }
+
 .sidebar .side-item a:hover {
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     box-shadow: 0 0 20px rgb(220, 0, 0);
@@ -63,103 +68,9 @@
     transition: transform 0.3s ease;
     transform: translate(0px, -6px);
   }
-// .sidebar i:hover p {
-//   display: inline;
-//   margin-left: 10px;
-// }
 
 
-
-
-
-
-
-
-
-// ===================================
-// ===================================
-
-// .sidebar:hover .logo {
-//   flex-direction: row;
-//   text-align: center;
-// }
-
-
-// .sidebar ul li{
-//   margin-bottom: 10px;
-//   a {
-//     color: $murdoc-red;
-//     text-decoration: none;
-//     position: relative;
-//     font-size: 14px;
-//     display: table;
-//     width: 300px;
-//     padding: 10px;
-//   }
-//   .fa-solid {
-//     position: relative;
-//     // width: 70px;
-//     height: 40px;
-//     top: 14px;
-//     font-size: 20px;
-//     text-align: center;
-//     color: $murdoc-red;
-//   }
-//   span {
-//     display: none;
-//   }
-//   .side-item {
-//     position: relative;
-//     top: 12px;
-//     margin-left: 10px;
-//   }
-// }
-
-// .sidebar li:hover i {
-//   text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-//   box-shadow: 0 0 20px rgb(220, 0, 0);
-//   transition: .1s;
-//   background-color: $murdoc-red;
-//   color: $light-background;
-//   border: 2px solid $murdoc-red;
-//   border-radius: 50%;
-//   padding: 10px;
-//   // transform: translate(12px, -2px);
-// }
-
-// // .sidebar i:hover span {
-// //   display: inline;
-// //   background: rgba(220, 0, 0, 0.05);
-// //   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
-// //   backdrop-filter: blur(17.7px);
-// //   -webkit-backdrop-filter: blur(17.7px);
-// //   border-radius: 5px;
-// //   padding: 5px;
-// // }
-
-// .sidebar li:hover i {
-//   animation: animate .5s linear 1;
-//   @keyframes animate {
-//     0%
-//     {
-//       transform: translate(0px,0);
-//     }
-//     25%, 75%
-//     {
-//       transform: translate(5px,0);
-//     }
-//     50%
-//     {
-//       transform: translate(0px,0);
-//     }
-//     100%
-//     {
-//       transform: translate(0px,0);
-//     }
-//   }
-// }
-
-// // .sidebar:hover {
-// //   width: 180px;
-// //   transition: width .1s ease;
-// // }
+.sidebar .side-item:hover {
+    transition: transform 0.3s ease;
+    transform: translateX(5px) translateY(0px);
+}
