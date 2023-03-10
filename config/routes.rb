@@ -6,6 +6,11 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
+  # Sidebar buttons routes
+  get "tree", to: "pages#tree"
+  get "download", to: "pages#download"
+  get "about", to: "pages#about"
+
   resources :nodes, only: :index
   resources :bookmarks, only: %i[index create destroy]
 end

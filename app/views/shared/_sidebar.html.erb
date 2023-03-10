@@ -13,29 +13,33 @@
     </div>
     <div class="side-items">
 
-      <li class="side-item"><a href="#" data-action="click->render-partial#replacePartial"
-      data-url="shared/main">
-        <i class="fa-solid fa-table-cells-large"></i>
-        <span>Browse Ruby</span>
-      </a></li>
+      <li class="side-item">
+        <button  data-action="click->replace-partial#replacePartial" data-url="<%= root_path %>">
+          <i class="fa-solid fa-table-cells-large"></i>
+          <span>Browse Ruby</span>
+        </button>
+      </li>
 
-      <li class="side-item"><a href="#" data-action="click->render-partial#replacePartial"
-      data-url="shared/tree">
-        <i class="fa-solid fa-tree"></i>
-        <span>Tree</span>
-      </a></li>
+      <li class="side-item">
+        <button  data-action="click->replace-partial#replacePartial" data-url="<%= tree_path %>">
+          <i class="fa-solid fa-tree"></i>
+          <span>Tree</span>
+        </button>
+      </li>
 
-      <li class="side-item"><a href="#" data-action="click->render-partial#replacePartial"
-      data-url="shared/installation_guide">
-        <i class="fa-solid fa-circle-down"></i>
-        <span><p>Download Ruby</p></span>
-      </a></li>
+      <li class="side-item">
+        <button data-action="click->replace-partial#replacePartial" data-url="<%= download_path %>">
+          <i class="fa-solid fa-circle-down"></i>
+          <span><p>Download Ruby</p></span>
+        </button>
+      </li>
 
-      <li class="side-item"><a href="#" data-action="click->render-partial#replacePartial"
-      data-url="shared/about_us">
-        <i class="fa-brands fa-readme"></i>
-        <span>Info</span>
-      </a></li>
+      <li class="side-item">
+        <button  data-action="click->replace-partial#replacePartial" data-url="<%= about_path %>">
+          <i class="fa-brands fa-readme"></i>
+          <span>About</span>
+        </button>
+      </li>
 
 
     </div>

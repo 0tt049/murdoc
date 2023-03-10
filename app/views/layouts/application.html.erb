@@ -11,13 +11,13 @@
   </head>
 
   <body>
-    <div class="my-container" data-controller="render-partial">
+    <div class="my-container" data-controller="replace-partial">
 
       <%= render "shared/sidebar" %>
-      
-      <div class="container">
-        <%= yield %>"
-      </div>
+
+      <turbo-frame class="container" data-replace-partial-target="container">
+        <%= yield %>
+      </turbo-frame>
 
     </div>
     <%= render "shared/flashes" %>

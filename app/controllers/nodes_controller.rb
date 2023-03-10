@@ -9,7 +9,7 @@ class NodesController < ApplicationController
 
     respond_to do |format|
       format.html # Follow regular flow of Rails
-      format.text { render partial: "nodes/list", locals: {nodes: @nodes}, formats: [:html] }
+      format.text { render partial: "nodes/list", locals: { nodes: @nodes }, formats: [:html] }
     end
   end
 
