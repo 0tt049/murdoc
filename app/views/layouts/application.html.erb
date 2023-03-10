@@ -11,12 +11,15 @@
   </head>
 
   <body>
-    <%= render "shared/sidebar" %>
+    <div class="my-container" data-controller="render-partial">
 
-    <div class="container">
-      <%= yield %>
+      <%= render "shared/sidebar" %>
+      
+      <div class="container">
+        <%= yield %>"
+      </div>
+
     </div>
-
     <%= render "shared/flashes" %>
   </body>
 </html>
