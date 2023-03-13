@@ -4,7 +4,6 @@ def createChild(obj, parent = nil)
   else
     if obj.name == "BasicObject"
       node = Node.create("name" => obj.name, "category" => obj.class.name.downcase)
-      # instance_method =
     else
       node = parent.children.create("name" => obj.name, "category" => obj.class.name.downcase)
     end
@@ -20,6 +19,15 @@ def procreate(obj, parent = nil)
       children.each { |child| procreate(child, parent) }
   end
     "Done"
+end
+
+def find_meth(node)
+  name = node.name.constantize
+  inst_meth = name.instance_methods(false).sort!
+  meth = name.methods(false).sort!
+  inst_meth.each { |m| node.siblings.create("name" => m, "category" => "instance methods") }
+  meth.each { |m| node.siblings.create("name" => m, "category" => "methods") }
+  node.descendants.each { |sub| find_meth(sub) }
 end
 
 
@@ -163,3 +171,5 @@ ALLOWED_CLASSES = [:Exception,
  :RUBYGEMS_ACTIVATION_MONITOR]
 
 procreate(BasicObject)
+root = Node.find_by(id: 1)
+find_meth(root)
