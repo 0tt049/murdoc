@@ -13,4 +13,3 @@ Rails.application.routes.draw do
   resources :nodes, only: :index
   resources :bookmarks, only: %i[index create destroy]
 end
-
