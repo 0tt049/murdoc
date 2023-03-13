@@ -1,0 +1,26 @@
+.instruction-card {
+  border-radius: 10px;
+  margin: 20px 0 20px 0;
+  padding: 20px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  cursor: default;
+  img {
+    width: 60px;
+    align-self: center;
+  }
+  i {
+    font-size: 4em;
+    margin: 16px 0 16px 0;
+  }
+  &:hover {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    transition: 0.1s;
+    kbd {
+      transition: background-color 0.3s ease;
+      background-color: #3e3e3e;
+    }
+  }
+}
