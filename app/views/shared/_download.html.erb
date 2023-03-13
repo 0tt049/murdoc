@@ -1,15 +1,60 @@
-  <div class="row">
+  <div class="row download-guide">
     <div class="col-md-12">
-      <h2 class="text-center">Installation Guide</h2>
-      <p>First, check if you already have Ruby installed by running "ruby -v" in your terminal. If you don't have it installed or if the version is outdated, proceed to the next step.</p>
-      <p>Install a version manager for Ruby, such as rbenv or rvm. This allows you to easily switch between different versions of Ruby and keep them separate from the system Ruby.</p>
-      <p>Install the latest stable version of Ruby using your version manager. For example, with rbenv, you would run the command "rbenv install 3.1.2".</p>
-      <p>Once the installation is complete, set the global Ruby version to be used by default with the command "rbenv global 3.1.2".</p>
-      <p>Verify that the correct version of Ruby is being used by running "ruby -v" in your terminal.</p>
+      <h5 class="murdoc-red mt-4 mb-4">Installation Guide</h5>
+      <p>First, check if you already have Ruby installed by running "ruby -v" in your terminal.</p>
+      <h6>Install by operating system via package manager:</h6>
+      <%# <pre> %>
+        <div class="row gx-5 my-5">
+
+          <div class="col-sm-4 instruction-card my-0">
+            <em>Ubuntu or Debian</em>
+            <div class="d-flex justify-content-center">
+              <i class="devicon-ubuntu-plain colored mx-2"></i><i class="devicon-debian-plain colored mx-2"></i>
+            </div>
+            <kbd>sudo apt-get install ruby-full</kbd>
+          </div>
+
+          <div class="col-sm-4 instruction-card my-0">
+            <em>macOS</em>
+            <i class="fa-brands fa-apple"></i>
+            <kbd>brew install ruby</kbd>
+          </div>
+
+          <div class="col-sm-4 instruction-card my-0">
+            <em>Arch Linux</em>
+            <%= image_tag "archlinux.png" %>
+            <kbd>sudo pacman -S ruby</kbd>
+          </div>
+
+          <div class="d-flex justify-content-center my-0">
+            <div class="col-sm-4 instruction-card my-0">
+              <em>Gentoo</em>
+              <i class="devicon-gentoo-plain colored"></i>
+              <kbd>sudo emerge dev-lang/ruby</kbd>
+            </div>
+
+            <div class="col-sm-4 instruction-card my-0">
+              <em>CentOS or Red Hat</em>
+              <div class="d-flex justify-content-center">
+              <i class="devicon-centos-plain colored mx-2"></i></i><i class="devicon-redhat-plain colored mx-2"></i>
+              </div>
+              <kbd>sudo yum install ruby</kbd>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mb-5">
+          <h6>Now type in <kbd>irb</kdb></h6>
+          <h6>Then type in <kbd>puts "Hello World!"</kbd></h6>
+          <h6>You're now using Ruby!</h6>
+          <p class="mt-4">To check your Ruby version run "ruby -v" in your terminal.</p>
+          <p>You can also install Ruby using <%= link_to "rbenv", "https://github.com/rbenv/rbenv" %> for Linux/macOS/WSL</p>
+        </div>
+
     </div>
   </div>
 
-  <div class="row">
+  <%# <div class="row">
     <div class="col-md-12">
       <h3 class="text-center">Ruby on Rails Installation</h3>
       <p>Install the Node.js runtime environment, which is required by some Ruby on Rails features. You can download it from the official website (https://nodejs.org/en/download/) or use a package manager.</p>
@@ -18,4 +63,4 @@
       <p>Verify that Ruby on Rails is installed correctly by running "rails -v" in your terminal.</p>
       <p>Congratulations, you have successfully installed Ruby and Ruby on Rails! You are now ready to start building your web applications.</p>
     </div>
-  </div>
+  </div> %>

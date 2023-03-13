@@ -7,10 +7,6 @@
   width: 90px;
   overflow: hidden;
   align-items: center;
-  background: rgba(220, 0, 0, 0.05);
-  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(17.7px);
-  -webkit-backdrop-filter: blur(17.7px);
 }
 
 .sidebar ul {
@@ -35,6 +31,15 @@
 .sidebar:hover .logo {
   // text-shadow: 0 0 20px rgba(220, 0, 0, 0.2);
   color: #f20101;
+}
+
+.sidebar:hover {
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+
+  // background: rgba(220, 0, 0, 0.05);
+  transition: .2s;
+  // backdrop-filter: blur(17.7px);
+  // -webkit-backdrop-filter: blur(17.7px);
 }
 
 .sidebar a {
