@@ -9,6 +9,3 @@ application.register("hello", HelloController)
 
 import SearchNodesController from "./search_nodes_controller"
 application.register("search-nodes", SearchNodesController)
-
-import TreeView from "./treeview"
-application.register("treeview", TreeView)
