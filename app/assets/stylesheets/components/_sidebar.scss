@@ -18,7 +18,8 @@
   font-weight: bold;
   display: flex;
   flex-direction: column;
-  margin: 25px 0 0;
+  // remove 170px if able to align items in center in a different way
+  margin: 25px 0 170px 0;
   align-items: center;
   color: $murdoc-red;
   li h1 {
