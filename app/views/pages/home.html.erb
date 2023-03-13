@@ -25,29 +25,33 @@
     <div class="card-wrapper">
       <div class="row">
           <div class="col-6">
-            <div class='card card-murdoc'>
-              <div id='card-text'>
-                <%= render partial: "pages/list", locals: { nodes: @nodes.all } %>
-              </div>
-              <div class='inner-search'>
-                <%= render "shared/searchbar" %>
-              </div>
-            </div>
-          </div>
-          <div class="col-6">
-            <div class='card card-murdoc'>
-              <div id='card-text'>
-                <%= render partial: "pages/list", locals: { nodes: @nodes.all } %>
-              </div>
-              <div class='inner-search'>
-                <%= render "shared/searchbar" %>
+             <div data-controller="search-nodes">
+                <div class='card card-murdoc'>
+                  <div id='card-text'>
+                    <%= render partial: "pages/list", locals: { nodes: @nodes.all } %>
+                  </div>
+                  <div class='inner-search'>
+                    <%= render "shared/searchbar" %>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-12">
-          <div class='card-doc'>
-            <p>Documentação</p>
-          </div>
+            <div class="col-6">
+             <div data-controller="search-nodes">
+                <div class='card card-murdoc'>
+                  <div id='card-text'>
+                    <%= render partial: "pages/list", locals: { nodes: @nodes.all } %>
+                  </div>
+                  <div class='inner-search'>
+                    <%= render "shared/searchbar" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+            <div class='card-doc'>
+              <p>Documentação</p>
+            </div>
           </div>
       </div>
     </div>
