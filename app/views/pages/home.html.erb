@@ -2,14 +2,25 @@
     <%#= render "shared/searchbar" %>
     <div data-controller="search-nodes">
       <div class='card-group'>
-        <div class='card card-murdoc'>
-          <div id='card-text'>
-            <%= render partial: "pages/list", locals: { nodes: @nodes } %>
-          </div>
-          <div class='inner-search' id='inner-search'>
-            <%= render "shared/searchbar" %>
-          </div>
-        </div>
+          <ul id="ul">
+            <div class='card card-murdoc'>
+              <div id='card-text'>
+                <div data-search-nodes-target="list">
+                  <% @nodes.each do |node| %>
+                    <li><span class="caret"><%= node.name %></span>
+                      <ul class="nested">
+                        <li><p>Category: <%= node.category %></p></li>
+                        <li><p>Documentation: <%= node.documentation %></p></li>
+                      </ul>
+                    </li>
+                  <% end %>
+                </div>
+              </div>
+              <div class='inner-search' id='inner-search'>
+                <%= render "shared/searchbar" %>
+              </div>
+            </div>
+          </ul>
         <div class='card card-murdoc'>
           <div id='card-text'>
             <%= render partial: "pages/list", locals: { nodes: @nodes.all } %>
