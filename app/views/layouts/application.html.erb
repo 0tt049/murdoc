@@ -8,6 +8,9 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%# added devicon link %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    
   </head>
 
   <body>
@@ -18,7 +21,7 @@
         <div class="container">
           <%= yield %>
         </div>
-        
+
       </div>
     <%= render "shared/flashes" %>
   </body>
