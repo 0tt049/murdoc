@@ -11,12 +11,12 @@
   </head>
 
   <body>
-    <div class="my-container" data-controller="replace-partial">
+    <div class="my-container">
 
       <%= render "shared/sidebar" %>
 
       <% turbo_frame_tag 'load' do %>
-        <div class="container" data-replace-partial-target="container">
+        <div class="container">
           <%= yield %>
         </div>
       <% end %>
