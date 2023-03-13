@@ -6,7 +6,6 @@
   height: 100%;
   width: 90px;
   overflow: hidden;
-  align-items: center;
 }
 
 .sidebar ul {
@@ -19,10 +18,10 @@
   font-weight: bold;
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin: 25px 0 0;
   align-items: center;
   color: $murdoc-red;
-  li {
+  li h1 {
     margin: 0;
     padding: 0;
   }
@@ -35,11 +34,7 @@
 
 .sidebar:hover {
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-
-  // background: rgba(220, 0, 0, 0.05);
   transition: .2s;
-  // backdrop-filter: blur(17.7px);
-  // -webkit-backdrop-filter: blur(17.7px);
 }
 
 .sidebar a {
@@ -54,7 +49,6 @@
   }
 }
 .side-items {
-  vertical-align: middle;
   display: flex;
   flex-direction: column;
   align-items: center;
