@@ -13,6 +13,8 @@ class PagesController < ApplicationController
     end
   end
 
+  def download; end
+
 
   private
 
