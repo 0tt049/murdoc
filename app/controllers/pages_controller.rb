@@ -11,26 +11,43 @@ class PagesController < ApplicationController
       format.html # Follow regular flow of Rails
       format.text { render partial: "nodes/list", locals: { nodes: @nodes }, formats: [:html] }
     end
+
+    respond_to do |format|
+      if turbo_frame_request? && turbo_frame_request_id == "load"
+        format.html { render partial: "shared/main", formats: [:html] }
+      else
+        format.html
+      end
+    end
   end
 
   def tree
     respond_to do |format|
-      format.html # Follow regular flow of Rails
-      format.text { render partial: "pages/tree", formats: [:html] }
+      if turbo_frame_request? && turbo_frame_request_id == "load"
+        format.html { render partial: "shared/tree", formats: [:html] }
+      else
+        format.html
+      end
     end
   end
 
   def download
     respond_to do |format|
-      format.html # Follow regular flow of Rails
-      format.text { render partial: "pages/download", formats: [:html] }
+      if turbo_frame_request? && turbo_frame_request_id == "load"
+        format.html { render partial: "shared/download_guide", formats: [:html] }
+      else
+        format.html
+      end
     end
   end
 
   def about
     respond_to do |format|
-      format.html # Follow regular flow of Rails
-      format.text { render partial: "pages/about", formats: [:html] }
+      if turbo_frame_request? && turbo_frame_request_id == "load"
+        format.html { render partial: "shared/about_us", formats: [:html] }
+      else
+        format.html
+      end
     end
   end
 

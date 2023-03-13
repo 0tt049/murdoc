@@ -14,31 +14,45 @@
     <div class="side-items">
 
       <li class="side-item">
-        <button  data-action="click->replace-partial#replacePartial" data-url="<%= root_path %>">
+        <%= link_to root_path,
+        data: { turbo_frame: 'load',
+                action: 'click->replace-partial#replacePartial'
+              } do %>
           <i class="fa-solid fa-table-cells-large"></i>
           <span>Browse Ruby</span>
-        </button>
+        <% end %>
       </li>
 
       <li class="side-item">
-        <button  data-action="click->replace-partial#replacePartial" data-url="<%= tree_path %>">
+        <%= link_to tree_path,
+        data: { turbo_frame: 'load',
+                action: 'click->replace-partial#replacePartial'
+              } do %>
           <i class="fa-solid fa-tree"></i>
           <span>Tree</span>
-        </button>
+        <% end %>
       </li>
 
       <li class="side-item">
-        <button data-action="click->replace-partial#replacePartial" data-url="<%= download_path %>">
+        <%= link_to download_path,
+        data: { turbo_frame: 'load',
+                action: 'click->replace-partial#replacePartial'
+              } do %>
           <i class="fa-solid fa-circle-down"></i>
           <span><p>Download Ruby</p></span>
-        </button>
+        <% end %>
+
       </li>
 
       <li class="side-item">
-        <button  data-action="click->replace-partial#replacePartial" data-url="<%= about_path %>">
+        <%= link_to about_path,
+        data: { turbo_frame: 'load',
+                action: 'click->replace-partial#replacePartial'
+              } do %>
           <i class="fa-brands fa-readme"></i>
           <span>About</span>
-        </button>
+        <% end %>
+
       </li>
 
 

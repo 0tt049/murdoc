@@ -15,9 +15,11 @@
 
       <%= render "shared/sidebar" %>
 
-      <turbo-frame class="container" data-replace-partial-target="container">
-        <%= yield %>
-      </turbo-frame>
+      <% turbo_frame_tag 'load' do %>
+        <div class="container" data-replace-partial-target="container">
+          <%= yield %>
+        </div>
+      <% end %>
 
     </div>
     <%= render "shared/flashes" %>
