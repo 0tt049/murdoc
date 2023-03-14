@@ -2,7 +2,7 @@
   <ul>
     <div class="logo">
 
-    <a href="/">
+    <%= link_to root_path do %>
       <li id="mur">
         <h1>MUR</h1>
       </li>
@@ -10,26 +10,32 @@
       <li id="doc">
         <h1>DOC</h1>
       </li>
-    </a>
+    <% end %>
 
     </div>
 
     <div class="side-items">
 
-      <li class="side-item"><a href="/">
-        <i class="fa-solid fa-table-cells-large"></i>
-        <span>Browse Ruby</span>
+      <li class="side-item">
+        <%= link_to root_path do %>
+          <i class="fa-solid fa-table-cells-large"></i>
+          <span>Browse Ruby</span>
+        <% end %>
+      </li>
+
+      <li class="side-item">
+        <%= link_to download_path do %>
+          <i class="fa-solid fa-circle-down"></i>
+          <span><p>Download Ruby</p></span>
+        <% end %>
       </a></li>
 
-      <li class="side-item"><a href="download">
-        <i class="fa-solid fa-circle-down"></i>
-        <span><p>Download Ruby</p></span>
-      </a></li>
-
-      <li class="side-item"><a href="about">
-        <i class="fa-brands fa-readme"></i>
-        <span>Info</span>
-      </a></li>
+      <li class="side-item">
+        <%= link_to about_path do %>
+          <i class="fa-brands fa-readme"></i>
+          <span>Info</span>
+        <% end %>
+      </li>
 
 
     </div>
