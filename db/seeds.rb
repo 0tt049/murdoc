@@ -35,6 +35,18 @@ def find_meth(node)
   end
 end
 
+def put_doc
+  i = 1
+  100.times do
+    node = Node.find_by(id: i)
+    node.documentation = LOREM
+    node.save
+    i += 1
+  end
+end
+
+LOREM = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis arcu luctus, gravida justo nec, molestie nibh. Sed rutrum tellus quis sem mollis, eget elementum mi tincidunt. Nunc sit amet enim id tortor cursus sodales. Etiam malesuada ligula in cursus mattis. Integer blandit nec nunc quis tempus. Nullam nec eros ut sem accumsan feugiat non vel nunc. Fusce dictum, nisl et pretium commodo, ipsum metus condimentum eros, sit amet dignissim nisi massa accumsan augue. Nullam vel molestie mi. Maecenas mollis diam eu ipsum rhoncus blandit quis at mauris. Sed et mauris molestie, luctus dui ac, congue nisi. Donec nec congue ipsum. Cras cursus orci tellus, ac suscipit turpis lacinia id. Donec id diam eget est cursus ultrices ac sit amet ante. Etiam diam sapien, feugiat at tristique vitae, ullamcorper sed purus. Aenean gravida eu nulla ac mattis."
+
 ALLOWED_CONSTANTS = [
   :Abbrev,
   :Addrinfo,
@@ -203,3 +215,4 @@ ALLOWED_CONSTANTS = [
 procreate(BasicObject)
 root = Node.find_by(id: 1)
 find_meth(root)
+put_doc
