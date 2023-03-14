@@ -1,0 +1,5 @@
+meta_name: "MURDOC"
+meta_title: "MURDOC - Facilitating Ruby documentation"
+meta_description: "MURDOC is a visual Ruby manual designed to help beginners and advanced Ruby users to guide themselves."
+meta_image: "murdoc-cover.png" # should exist in `app/assets/images/`
+twitter_account: "@ruby_murdoc"
