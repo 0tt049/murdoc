@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   get "download", to: "pages#download"
   get "about", to: "pages#about"
 
-  resources :nodes, only: :index
+  resources :nodes, only: %i[index show]
   resources :bookmarks, only: %i[index create destroy]
 end

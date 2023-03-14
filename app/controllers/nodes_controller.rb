@@ -13,6 +13,13 @@ class NodesController < ApplicationController
     end
   end
 
+  def show
+    @node = Node.find(params[:id])
+    respond_to do |format|
+      format.html # Follow regular flow of Rails
+      format.text { render partial: "nodes/show", locals: {node: @node}, formats: [:html] }
+    end
+  end
 
   private
 

@@ -1,0 +1,14 @@
+<%= form_with url: nodes_path,
+  method: :get,
+  html: {class: "mb-4", data: {search_children_target: "form"}} do |f|
+%>
+  <%= f.text_field :query,
+    class: "form-control",
+    placeholder: "Search nodes",
+    value: params[:query],
+    data: {
+      search_nodes_target: "input",
+      action: "keyup->search-nodes#update"
+    }
+  %>
+<% end %>

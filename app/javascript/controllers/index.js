@@ -7,6 +7,9 @@ import { application } from "./application"
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+import NodesAjaxController from "./nodes_ajax_controller"
+application.register("nodes-ajax", NodesAjaxController)
+
 import SearchNodesController from "./search_nodes_controller"
 application.register("search-nodes", SearchNodesController)
 

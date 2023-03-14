@@ -11,12 +11,16 @@ class PagesController < ApplicationController
       format.html # Follow regular flow of Rails
       format.text { render partial: "nodes/list", locals: {nodes: @nodes}, formats: [:html] }
     end
+
+    if params[:parent].present?
+      @parent = Node.find(params[:parent])
+    end
   end
 
   def download; end
 
   def about; end
-  
+
   private
 
   def nodes_params
