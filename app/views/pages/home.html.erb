@@ -1,6 +1,7 @@
 <div>
   <%#= render "shared/searchbar" %>
   <div>
+
     <div data-controller="search-nodes">
       <div class='card card-parent' style="float: left;">
         <div id='card-text'>
@@ -23,12 +24,14 @@
       </div>
     </div>
     <div class="card-wrapper">
-      <div class="row">
+      <div class="row" data-controller="nodes-ajax" >
           <div class="col-6">
              <div data-controller="search-nodes">
                 <div class='card card-murdoc'>
                   <div id='card-text'>
-                    <%= render partial: "pages/list", locals: { nodes: @nodes.all } %>
+                    <% if @parent.present?%>
+                      <%= render partial: "pages/children_list", locals: { node: @parent} %>
+                    <% end %>
                   </div>
                   <div class='inner-search'>
                     <%= render "shared/searchbar" %>
@@ -40,8 +43,9 @@
              <div data-controller="search-nodes">
                 <div class='card card-murdoc'>
                   <div id='card-text'>
-                    <%= render partial: "pages/list", locals: { nodes: @nodes.all } %>
-                  </div>
+                    <% if @parent.present?%>
+                      <%= render partial: "pages/method_list", locals: { node: @parent} %>
+                    <% end %>                  </div>
                   <div class='inner-search'>
                     <%= render "shared/searchbar" %>
                   </div>
