@@ -24,7 +24,6 @@ def find_meth(node)
   begin
     name = node.name.constantize
   rescue NameError => e
-    puts e
   ensure
     unless name.nil?
       inst_meth = name.instance_methods(false).sort!
