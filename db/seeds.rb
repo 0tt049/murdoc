@@ -18,16 +18,22 @@ def procreate(obj, parent = nil)
       children = parent.name.constantize.subclasses
       children.each { |child| procreate(child, parent) }
   end
-    "Done"
 end
 
 def find_meth(node)
-  name = node.name.constantize
-  inst_meth = name.instance_methods(false).sort!
-  meth = name.methods(false).sort!
-  inst_meth.each { |m| node.siblings.create("name" => m, "category" => "instance methods") }
-  meth.each { |m| node.siblings.create("name" => m, "category" => "methods") }
-  node.descendants.each { |sub| find_meth(sub) }
+  begin
+    name = node.name.constantize
+  rescue NameError => e
+    puts e
+  ensure
+    unless name.nil?
+      inst_meth = name.instance_methods(false).sort!
+      meth = name.methods(false).sort!
+      inst_meth.each { |m| node.siblings.create("name" => m, "category" => "instance methods") }
+      meth.each { |m| node.siblings.create("name" => m, "category" => "methods") }
+    end
+    node.descendants.each { |sub| find_meth(sub) }
+  end
 end
 
 
