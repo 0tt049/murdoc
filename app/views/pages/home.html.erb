@@ -39,20 +39,7 @@
 
   <div class='card card-parent' style="float: right;">
 
-    <div id='card-text'>
-      <div data-search-nodes-target="list">
-        <ul>
-          <% @nodes.each do |node| %>
-            <li><span class="caret"><%= node.name %></span>
-              <ul class="nested">
-                <li><p>Category: <%= node.category %></p></li>
-                <li><p>Documentation: <%= node.documentation %></p></li>
-              </ul>
-            </li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
+    <%= render partial: "pages/method_list", locals: { node: @parent} %>
 
   </div>
 
