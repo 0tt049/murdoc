@@ -1,0 +1,7 @@
+.inner-grid {
+  display: grid;
+  grid-template-columns: 3fr;
+  grid-template-rows: repeat(2, 2fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 10px;
+  }
