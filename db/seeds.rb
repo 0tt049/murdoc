@@ -16,6 +16,12 @@ children.each do |child|
     sibling.save
   end
 end
+
+class_list_id = (2..19).to_a
+10.times do
+  my_id = class_list_id.sample
+  Node.find_by(id: my_id).siblings.create("name" => "Module#{my_id}", "category" => "module")
+end
 # def createChild(obj, parent = nil)
 #   unless obj.respond_to?(:name)
 #     return
