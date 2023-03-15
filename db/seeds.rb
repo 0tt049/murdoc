@@ -17,10 +17,16 @@ children.each do |child|
   end
 end
 
-class_list_id = (2..19).to_a
-10.times do
+class_list_id = (2..9).to_a
+4.times do
   my_id = class_list_id.sample
   Node.find_by(id: my_id).siblings.create("name" => "Module#{my_id}", "category" => "module")
+  class_list_id - [my_id]
+end
+
+Node.all.each do |n|
+  5.times do
+    n.children.create("name" => "method_")
 end
 # def createChild(obj, parent = nil)
 #   unless obj.respond_to?(:name)
