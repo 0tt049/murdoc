@@ -1,63 +1,58 @@
-<div>
-  <%#= render "shared/searchbar" %>
-  <div>
+<div class="my-grid">
 
-    <div data-controller="search-nodes">
-      <div class='card card-parent' style="float: left;">
-        <div id='card-text'>
-          <div data-search-nodes-target="list">
-            <ul>
-              <% @nodes.each do |node| %>
+  <div data-controller="search-nodes">
+    <div class='card card-parent' style="float: left;">
+
+      <div id='card-text'>
+        <div data-search-nodes-target="list">
+          <ul>
+            <% @nodes.each do |node| %>
               <li><span class="caret"><%= node.name %></span>
                 <ul class="nested">
                   <li><p>Category: <%= node.category %></p></li>
                   <li><p>Documentation: <%= node.documentation %></p></li>
                 </ul>
               </li>
-              <% end %>
-            </ul>
-          </div>
-        </div>
-        <div class='inner-search' id='inner-search'>
-          <%= render "shared/searchbar" %>
+            <% end %>
+          </ul>
         </div>
       </div>
-    </div>
-    <div class="card-wrapper">
-      <div class="row" data-controller="nodes-ajax" >
-          <div class="col-6">
-             <div data-controller="search-nodes">
-                <div class='card card-murdoc'>
-                  <div id='card-text'>
-                    <% if @parent.present?%>
-                      <%= render partial: "pages/children_list", locals: { node: @parent} %>
-                    <% end %>
-                  </div>
-                  <div class='inner-search'>
-                    <%= render "shared/searchbar" %>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-6">
-             <div data-controller="search-siblings">
-                <div class='card card-murdoc'>
-                  <div id='card-text'>
-                    <% if @parent.present?%>
-                      <%= render partial: "pages/method_list", locals: { node: @parent} %>
-                    <% end %>                  </div>
-                  <div class='inner-search'>
-                    <%= render "shared/searchbar" %>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-12">
-            <div class='card-doc'>
-              <%= render partial: "pages/documentation", locals: { node: @parent} %>
-            </div>
-          </div>
+      <div class='inner-search' id='inner-search'>
+        <%= render "shared/searchbar" %>
       </div>
+
     </div>
   </div>
+
+  <div class="inner-grid" data-controller="nodes-ajax" >
+
+    <div class='card-doc'>
+      <%= render partial: "pages/documentation", locals: { node: @parent} %>
+    </div>
+
+    <div class='card-doc'>
+      <%= render partial: "pages/documentation", locals: { node: @parent} %>
+    </div>
+
+  </div>
+
+  <div class='card card-parent' style="float: right;">
+
+    <div id='card-text'>
+      <div data-search-nodes-target="list">
+        <ul>
+          <% @nodes.each do |node| %>
+            <li><span class="caret"><%= node.name %></span>
+              <ul class="nested">
+                <li><p>Category: <%= node.category %></p></li>
+                <li><p>Documentation: <%= node.documentation %></p></li>
+              </ul>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
 </div>

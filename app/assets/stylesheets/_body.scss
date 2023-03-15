@@ -1,7 +1,5 @@
 body {
   position: relative;
-  // background-color: $body-bg;
-  color: #2a231d;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -10,6 +8,9 @@ body {
 }
 h2, h3, h4, h5, h6, p {
   cursor: default;
+}
+.row {
+  margin: 0;
 }
 // * {
 //   box-sizing: border-box;
