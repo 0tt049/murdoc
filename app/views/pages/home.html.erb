@@ -1,6 +1,6 @@
-<div class="row">
+<div class="my-grid">
 
-  <div class="col-3" data-controller="search-nodes">
+  <div data-controller="search-nodes">
     <div class='card card-parent' style="float: left;">
 
       <div id='card-text'>
@@ -24,41 +24,35 @@
     </div>
   </div>
 
-  <div class="row col-6" data-controller="nodes-ajax" >
+  <div class="inner-grid" data-controller="nodes-ajax" >
 
-        <div class="col-12">
-          <div class='card-doc'>
-            <%= render partial: "pages/documentation", locals: { node: @parent} %>
-          </div>
-        </div>
+    <div class='card-doc'>
+      <%= render partial: "pages/documentation", locals: { node: @parent} %>
+    </div>
 
-        <div class="col-12">
-          <div class='card-doc'>
-            <%= render partial: "pages/documentation", locals: { node: @parent} %>
-          </div>
-        </div>
+    <div class='card-doc'>
+      <%= render partial: "pages/documentation", locals: { node: @parent} %>
+    </div>
 
   </div>
 
-  <div class="col-3">
-    <div class='card card-parent' style="float: right;">
+  <div class='card card-parent' style="float: right;">
 
-      <div id='card-text'>
-        <div data-search-nodes-target="list">
-          <ul>
-            <% @nodes.each do |node| %>
-              <li><span class="caret"><%= node.name %></span>
-                <ul class="nested">
-                  <li><p>Category: <%= node.category %></p></li>
-                  <li><p>Documentation: <%= node.documentation %></p></li>
-                </ul>
-              </li>
-            <% end %>
-          </ul>
-        </div>
+    <div id='card-text'>
+      <div data-search-nodes-target="list">
+        <ul>
+          <% @nodes.each do |node| %>
+            <li><span class="caret"><%= node.name %></span>
+              <ul class="nested">
+                <li><p>Category: <%= node.category %></p></li>
+                <li><p>Documentation: <%= node.documentation %></p></li>
+              </ul>
+            </li>
+          <% end %>
+        </ul>
       </div>
-
     </div>
+
   </div>
 
 </div>
