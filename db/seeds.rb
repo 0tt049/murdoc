@@ -12,7 +12,7 @@ children = Node.find_by(id: 1).children
 
 children.each do |child|
   5.times do
-    sibling = child.siblings.create("name" => "Sub#{child.name}", "category" => cat)
+    sibling = child.children.create("name" => "Sub#{child.name}", "category" => cat)
     sibling.save
   end
 end
