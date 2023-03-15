@@ -7,7 +7,7 @@
   width: 90px;
   overflow: hidden;
   position: fixed;
-
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar ul {
@@ -33,10 +33,11 @@
 .sidebar:hover .logo {
   // text-shadow: 1px 1px 0 rgba(255, 255, 255, 1);
   color: #f20101;
+  text-decoration: none;
 }
 
 .sidebar:hover {
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
   transition: .2s;
 }
 
@@ -45,16 +46,18 @@
   text-align: center;
   color: $murdoc-red
 }
+
+.side-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .side-item {
   margin: 22px auto;
   span {
     display: none;
   }
-}
-.side-items {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .sidebar .side-item a:hover {

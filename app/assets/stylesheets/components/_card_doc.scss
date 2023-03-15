@@ -1,10 +1,11 @@
 .card-doc {
-  background-color: $light-background;
+  background-color: $dark-detail;
   border-radius: 15px;
   padding: 20px;
-  border: 1px solid red;
+  border: 1px solid $light-gray;
+  color: $dark-text-color;
   &:hover {
-    background-color: $dark-detail;
+    background-color: $dark-hover;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
     transition: 0.2s;
   }

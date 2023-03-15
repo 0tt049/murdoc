@@ -1,11 +1,12 @@
 .card-murdoc {
-  background-color: $dark-background;
+  // background-color: $dark-detail;
   margin: 20px 20px 20px 0;
   border: 0;
   height: 40vh;
   position: relative;
+  color: $dark-text-color;
   &:hover {
-    background-color: $dark-detail;
+    background-color: $dark-hover;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
     border: 1px;
     transition: 0.2s;
@@ -28,20 +29,20 @@
 
 .card-parent {
   width: 20vw;
-  background-color: $light-background;
-  border: 1px solid red;
+  background-color: $dark-detail;
+  border: 1px solid $light-gray;
   height: 94vh;
   position: relative;
   border-radius: 15px;
+  color: $dark-text-color;
   &:hover {
-    background-color: $dark-detail;
+    background-color: $dark-hover;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-    border: 1px;
     transition: 0.2s;
   }
 }
 
-  #card-text {
+#card-text {
   overflow: auto;
   padding: 20px;
 }

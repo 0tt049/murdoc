@@ -5,6 +5,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: $dark-text-color;
 }
 h2, h3, h4, h5, h6, p {
   cursor: default;
@@ -24,12 +25,12 @@ ul{
   padding:0;
 }
 .caret{
-  cursor:pointer;
+  cursor:default;
   user-select:none;
 }
 .caret::before {
   content: "\25B6";
-  color: black;
+  color: $murdoc-red;
   display: inline-block;
   margin-right: 5px;
 }
@@ -41,4 +42,13 @@ ul{
 }
 .active{
   display: block;
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+kbd {
+  color: $dark-text-color;
+  background-color: $dark-detail;
 }
