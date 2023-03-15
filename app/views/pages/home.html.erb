@@ -27,7 +27,10 @@
 
   <div class="inner-grid" data-controller="nodes-ajax" >
 
-  
+    <div class='card-doc card-mid-top'>
+      <%= render partial: "pages/path_view", locals: { node: @parent} %>
+    </div>
+
     <div class='card-doc'>
       <%= render partial: "pages/documentation", locals: { node: @parent} %>
     </div>
