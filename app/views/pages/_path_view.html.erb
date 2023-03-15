@@ -1,60 +1,30 @@
-<%# <div class="path-view">
-	<ul>
-		<li>
-			<a href="#">Parent</a>
-			<ul>
-				<li>
-					<a href="#">Child</a>
-					<ul>
-						<li>
-							<a href="#">Grand Child</a>
-              <ul>
-                <li>
-                  <a href="#">Great Grand Child</a>
-                </li>
-              </ul>
-						</li>
-					</ul>
-				</li>
-      </ul>
-    </li>
-  </ul>
-</div> %>
+
 <%# <div class="path-view"> %>
-<% if node.respond_to?(:id) %>
-  <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-    <ol class="breadcrumb">
+  <%# if node.respond_to?(:id) %>
+    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+      <ol class="breadcrumb">
 
-      <li class="breadcrumb-item">
-        <input type="checkbox" class="btn-check" id="<%  %>" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
-      </li>
+        <li class="breadcrumb-item">
+          <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+          <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
+        </li>
 
-      <li class="breadcrumb-item">
-        <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btncheck2">Checkbox 2</label>
-      </li>
+        <li class="breadcrumb-item">
+          <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+          <label class="btn btn-outline-primary" for="btncheck2">Checkbox 2</label>
+        </li>
 
-      <li class="breadcrumb-item">
-        <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
-      </li>
+        <li class="breadcrumb-item">
+          <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+          <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
+        </li>
 
-      <li class="breadcrumb-item active" aria-current="page">
-        <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btncheck4">Checkbox 4</label>
-      </li>
+        <li class="breadcrumb-item active" aria-current="page">
+          <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
+          <label class="btn btn-outline-primary" for="btncheck4">Checkbox 4</label>
+        </li>
 
-    </ol>
-  </nav>
+      </ol>
+    </nav>
+  <%# end %>
 <%# </div> %>
-<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-  <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-  <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
-
-  <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-  <label class="btn btn-outline-primary" for="btncheck2">Checkbox 2</label>
-
-  <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-  <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
-</div>
