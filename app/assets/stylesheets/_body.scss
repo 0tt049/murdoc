@@ -5,7 +5,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: $dark-text-color;
+  color: white;
 }
 h2, h3, h4, h5, h6, p {
   cursor: default;
@@ -30,7 +30,7 @@ ul{
 }
 .caret::before {
   content: "\25B6";
-  color: $murdoc-red;
+  color: red;
   display: inline-block;
   margin-right: 5px;
 }
@@ -49,6 +49,6 @@ ul{
 }
 
 kbd {
-  color: $dark-text-color;
-  background-color: $dark-detail;
+  color: white;
+  background-color: black;
 }
