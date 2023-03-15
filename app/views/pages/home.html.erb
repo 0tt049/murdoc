@@ -9,8 +9,9 @@
             <% @nodes.each do |node| %>
               <li><span class="caret"><%= node.name %></span>
                 <ul class="nested">
-                  <li><p>Category: <%= node.category %></p></li>
-                  <li><p>Documentation: <%= node.documentation %></p></li>
+                  <li><% node.children.where(category: "class").each do |child| %>
+                   <p><%=child.name %></p>
+                  <% end %></li>
                 </ul>
               </li>
             <% end %>
