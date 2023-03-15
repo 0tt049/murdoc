@@ -9,8 +9,9 @@
             <% @nodes.each do |node| %>
               <li><span class="caret"><%= node.name %></span>
                 <ul class="nested">
-                  <li><p>Category: <%= node.category %></p></li>
-                  <li><p>Documentation: <%= node.documentation %></p></li>
+                  <li><% node.children.where(category: "class").each do |child| %>
+                   <p><%=child.name %></p>
+                  <% end %></li>
                 </ul>
               </li>
             <% end %>
@@ -26,8 +27,8 @@
 
   <div class="inner-grid" data-controller="nodes-ajax" >
 
-    <div class='card-doc'>
-      <%= render partial: "pages/documentation", locals: { node: @parent} %>
+    <div class='card-doc card-mid-top'>
+      <%= render partial: "pages/path_view", locals: { node: @parent} %>
     </div>
 
     <div class='card-doc'>
