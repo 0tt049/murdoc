@@ -1,3 +1,5 @@
-<% if node.respond_to?(:documentation) %>
-  <%= node.documentation %>
+<%= turbo_frame_tag 'home' do  %>
+  <% if doc_node.respond_to?(:documentation) %>
+    <%= doc_node.documentation %>
+  <% end %>
 <% end %>

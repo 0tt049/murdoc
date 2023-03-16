@@ -1,0 +1,22 @@
+  <%= turbo_frame_tag 'home' do %>
+    <div class="d-flex">
+      <div class="inner-grid" data-controller="nodes-ajax" >
+
+        <div class='card-doc card-mid-top'>
+
+          <%= render partial: "pages/path_view", locals: { node: node} %>
+        </div>
+
+        <div class='card-doc'>
+          <%= render partial: "pages/documentation", locals: { doc_node: doc_node} %>
+        </div>
+
+      </div>
+
+      <div class='card card-parent' style="float: right;">
+
+        <%= render partial: "pages/method_list", locals: { node: node} %>
+
+      </div>
+    </div>
+  <% end %>
