@@ -36,7 +36,7 @@ ul{
 }
 
 .caret::before {
-  content: "\25B6";
+  content: "\21FE";
   color: #DC0000;
   display: inline-block;
   margin-right: 5px;
@@ -69,4 +69,11 @@ kbd {
 
 ::-webkit-scrollbar-track-piece {
   display: none;
+}
+
+a {
+  color: #d8d8d8;
+  &:hover {
+    color: #fff;
+  }
 }
