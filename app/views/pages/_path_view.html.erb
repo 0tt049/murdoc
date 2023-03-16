@@ -9,26 +9,26 @@
 
           <li class="breadcrumb-item">
 
-          <% if node_path_item.siblings.where(category:"module").present? %>
+            <% if node_path_item.siblings.where(category:"module").present? %>
 
-            <ul class="list-group">
+              <ul class="list-group">
 
-              <% node_path_item.siblings.where(category:"module").each do |n| %>
-                <li class="list-group-item">
+                <% node_path_item.siblings.where(category:"module").each do |n| %>
+                  <li class="list-group-item">
 
-                  <input type="checkbox" class="btn-check" id=<%= n.id %> autocomplete="off">
-                  <label class="btn btn-outline-danger" for=<%= n.id %>><%= n.name %></label>
+                    <input type="checkbox" class="btn-check" id=<%= n.id %> autocomplete="off" data-action="click->check#update">
+                    <label class="btn btn-outline-danger" for=<%= n.id %>><%= n.name %></label>
 
-                </li>
-              <% end %>
-            </ul>
+                  </li>
+                <% end %>
+              </ul>
 
-          <% else %>
+            <% else %>
 
-            <input type="checkbox" class="btn-check" id=<%= node_path_item.id %> autocomplete="off">
-            <label class="btn btn-outline-danger" for=<%= node_path_item.id %>><%= node_path_item.name %></label>
+              <input type="checkbox" class="btn-check" id=<%= node_path_item.id %> autocomplete="off" data-action="click->check#update">
+              <label class="btn btn-outline-danger" for=<%= node_path_item.id %>><%= node_path_item.name %></label>
 
-          <% end %>
+            <% end %>
 
           </li>
 

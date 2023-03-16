@@ -1,5 +1,7 @@
-<% if node.present? %>
-  <% node.siblings.where(category:['instance methods', 'methods']).each do |child| %>
-    <h2><%= child.name %></h2>
+<div data-check-target="list">
+  <% if node.present? %>
+    <% node.siblings.where(category:['instance methods', 'methods']).each do |child| %>
+      <h2><%= child.name %></h2>
+    <% end %>
   <% end %>
-<% end %>
+</div>

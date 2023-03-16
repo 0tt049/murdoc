@@ -4,14 +4,20 @@
 
 import { application } from "./application"
 
+import CheckController from "./check_controller"
+application.register("check", CheckController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
 import NodesAjaxController from "./nodes_ajax_controller"
 application.register("nodes-ajax", NodesAjaxController)
 
+import SearchChildrenController from "./search_children_controller"
+application.register("search-children", SearchChildrenController)
+
 import SearchNodesController from "./search_nodes_controller"
 application.register("search-nodes", SearchNodesController)
 
-import TreeView from "./treeview"
-application.register("treeview", TreeView)
+import SearchSiblingsController from "./search_siblings_controller"
+application.register("search-siblings", SearchSiblingsController)
