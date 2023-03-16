@@ -15,14 +15,22 @@
 //   color: white;
 
 // }
+.btn {
+}
 
+ .btn-outline-danger {
+  --bs-btn-active-color: white;
+  --bs-btn-border-width: 2px;
+
+}
 .path-view .breadcrumb-item .list-group-item {
   // padding: 12px 32px;
   background-color: rgba(0, 0, 0, 0);
   border-style: none;
+  // padding: 0 16px;
   // // border-radius: 15px;
   // color: $murdoc-red;
-  cursor: pointer;
+  // cursor: pointer;
   // &::after {
   //   display: block;
   //   width: 0;
