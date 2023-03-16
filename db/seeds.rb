@@ -1,3 +1,5 @@
+LOREM = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis arcu luctus, gravida justo nec, molestie nibh. Sed rutrum tellus quis sem mollis, eget elementum mi tincidunt. Nunc sit amet enim id tortor cursus sodales. Etiam malesuada ligula in cursus mattis. Integer blandit nec nunc quis tempus. Nullam nec eros ut sem accumsan feugiat non vel nunc. Fusce dictum, nisl et pretium commodo, ipsum metus condimentum eros, sit amet dignissim nisi massa accumsan augue. Nullam vel molestie mi. Maecenas mollis diam eu ipsum rhoncus blandit quis at mauris. Sed et mauris molestie, luctus dui ac, congue nisi. Donec nec congue ipsum. Cras cursus orci tellus, ac suscipit turpis lacinia id. Donec id diam eget est cursus ultrices ac sit amet ante. Etiam diam sapien, feugiat at tristique vitae, ullamcorper sed purus. Aenean gravida eu nulla ac mattis."
+
 obj = "Class"
 cat = "class"
 
@@ -33,6 +35,13 @@ Node.all.each do |n|
     meth.save
   end
 end
+
+Node.all.each do |n|
+  n.documentation = LOREM
+  n.save
+end
+
+
 # def createChild(obj, parent = nil)
 #   unless obj.respond_to?(:name)
 #     return
@@ -80,7 +89,6 @@ end
 #   end
 # end
 
-# LOREM = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis arcu luctus, gravida justo nec, molestie nibh. Sed rutrum tellus quis sem mollis, eget elementum mi tincidunt. Nunc sit amet enim id tortor cursus sodales. Etiam malesuada ligula in cursus mattis. Integer blandit nec nunc quis tempus. Nullam nec eros ut sem accumsan feugiat non vel nunc. Fusce dictum, nisl et pretium commodo, ipsum metus condimentum eros, sit amet dignissim nisi massa accumsan augue. Nullam vel molestie mi. Maecenas mollis diam eu ipsum rhoncus blandit quis at mauris. Sed et mauris molestie, luctus dui ac, congue nisi. Donec nec congue ipsum. Cras cursus orci tellus, ac suscipit turpis lacinia id. Donec id diam eget est cursus ultrices ac sit amet ante. Etiam diam sapien, feugiat at tristique vitae, ullamcorper sed purus. Aenean gravida eu nulla ac mattis."
 
 # ALLOWED_CONSTANTS = [
 #   :Abbrev,
