@@ -7,12 +7,24 @@ class PagesController < ApplicationController
       @nodes = @nodes.where("lower(name) LIKE :search OR lower(category) LIKE :search OR lower(documentation) LIKE :search", search: "%#{params[:query].downcase}%")
     end
 
-    respond_to do |format|
-      format.html # Follow regular flow of Rails
-      format.text { render partial: "nodes/list", locals: {nodes: @nodes}, formats: [:html] }
+    @node = Node.find(params[:parent]) if params[:parent].present? && Node.exists?(params[:parent])
+    @doc_node = (Node.find(params[:doc]) if params[:doc].present? && Node.exists?(params[:doc])) || @node
+
+
+    if params[:path_node].present?
+      path_node = Node.find(params[:path_node])
+      @methods = { methods: path_node.children.where(category: ['instance_method', 'method']) }
     end
 
-    @parent = Node.find(params[:parent]) if params[:parent].present? && Node.exists?(params[:parent])
+
+    respond_to do |format|
+      if turbo_frame_request? && turbo_frame_request_id == 'home'
+        format.html { render partial: "pages/home_content", locals: { node: @node, doc_node: @doc_node } }
+      else
+        format.html
+        format.json { render json: @methods }
+      end
+    end
   end
 
   def download; end

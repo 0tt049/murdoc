@@ -1,7 +1,14 @@
-<div data-check-target="list">
-  <% if node.present? %>
-    <% node.siblings.where(category:['instance methods', 'methods']).each do |child| %>
-      <h2><%= child.name %></h2>
+<% if node.present? %>
+  <ul data-check-target="list">
+    <% node.path.each do |node_path_item| %>
+
+      <% node_path_item.children.where(category:['instance_method', 'method']).each do |child| %>
+
+      <li>
+        <%= link_to child.name, "/?parent=#{node.id}&doc=#{child.id}", class: 'text-decoration-none', data: {turbo_frame: 'home', check_parent_node_id_value: node.id } %>
+      </li>
+
+      <% end %>
     <% end %>
-  <% end %>
-</div>
+  </ul>
+<% end %>

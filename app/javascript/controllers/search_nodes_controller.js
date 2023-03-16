@@ -17,5 +17,7 @@ export default class extends Controller {
       .then((data) => {
         this.listTarget.outerHTML = data
       })
+
+    
   }
 }
