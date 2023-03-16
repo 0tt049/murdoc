@@ -12,6 +12,13 @@
 
               <% if node_path_item.siblings.where(category:"module").present? %>
 
+                <li class="list-group-item">
+
+                  <input type="checkbox" class="btn-check " id=<%= node_path_item.id %> autocomplete="off" data-action="click->check#update">
+                  <label class="btn btn-outline-danger" for=<%= node_path_item.id %>><%= node_path_item.name %></label>
+
+                </li>
+
                 <% node_path_item.siblings.where(category:"module").each do |n| %>
                   <li class="list-group-item">
 
