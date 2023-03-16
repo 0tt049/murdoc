@@ -7,7 +7,7 @@
   width: 90px;
   overflow: hidden;
   position: fixed;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(47, 122, 167, 0.2);
 }
 
 .sidebar ul {
@@ -37,7 +37,7 @@
 }
 
 .sidebar:hover {
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(47, 122, 167, 0.4);
   transition: .2s;
 }
 
@@ -51,6 +51,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 23vh;
 }
 
 .side-item {
@@ -61,17 +62,17 @@
 }
 
 .sidebar .side-item a:hover {
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0 20px rgb(220, 0, 0);
-    transition: .1s;
-    background-color: $murdoc-red;
-    color: $light-background;
-    border: 2px solid $murdoc-red;
-    border-radius: 50%;
-    padding: 10px;
-    transition: transform 0.3s ease;
-    transform: translate(0px, -6px);
-  }
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 20px rgb(220, 0, 0);
+  transition: .1s;
+  background-color: $murdoc-red;
+  color: $dark-background;
+  border: 2px solid $murdoc-red;
+  border-radius: 50%;
+  padding: 10px;
+  transition: transform 0.3s ease;
+  transform: translate(0px, -6px);
+}
 
 
 .sidebar .side-item:hover {

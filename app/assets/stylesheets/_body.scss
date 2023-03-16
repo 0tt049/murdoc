@@ -5,41 +5,52 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: white;
+  color: $gray-300;
+  background-color: $body-color;
+  font-family: 'Roboto', sans-serif;
 }
+
 h2, h3, h4, h5, h6, p {
   cursor: default;
 }
+
 .row {
   margin: 0;
 }
+
 // * {
 //   box-sizing: border-box;
 // }
 
 ul{
-  list-style:none;
+  list-style: none;
 }
+
 #ul{
   margin:0;
   padding:0;
 }
+
 .caret{
-  cursor:default;
-  user-select:none;
+  cursor: default;
+  user-select: none;
 }
+
 .caret::before {
   content: "\25B6";
-  color: red;
+  color: $red;
   display: inline-block;
   margin-right: 5px;
 }
+
 .caret-down::before {
   transform: rotate(90deg);
 }
+
 .nested{
-  display:none;
+  display: none;
 }
+
 .active{
   display: block;
 }
@@ -49,6 +60,6 @@ ul{
 }
 
 kbd {
-  color: white;
-  background-color: black;
+  color: $gray-300;
+  background-color: $body-color;
 }
