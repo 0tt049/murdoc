@@ -3,7 +3,7 @@
   <div data-controller="search-nodes">
     <div class='card card-parent pt-5' style="float: left;">
 
-      <div id='card-text'>
+      <div id='card-text' class="mb-1">
         <div data-search-nodes-target="list">
           <ul>
             <% @nodes.each do |node| %>
@@ -20,6 +20,11 @@
       </div>
       <div>
         <%= render "shared/searchbar" %>
+      </div>
+      <div>
+        <div class="ruby-symbol">
+          <i class="devicon-ruby-plain"></i>
+        </div>
       </div>
 
     </div>

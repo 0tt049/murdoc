@@ -62,3 +62,11 @@ kbd {
   color: #d8d8d8;
   background-color: #172635;
 }
+
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+::-webkit-scrollbar-track-piece {
+  display: none;
+}
