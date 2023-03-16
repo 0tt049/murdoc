@@ -10,14 +10,14 @@ export default class extends Controller {
     // console.log(this.element);
     console.log("update");
     const list = this.listTarget;
-    // list.innerHTML = "Hello, Stimulus!"
+    list.innerHTML = "Hello, Stimulus!"
+    // print in console the event id
+    console.log(event.target.id);
 
     // event.preventDefault()
 
-    fetch(this.listTarget.action, {
-      method: "GET",
-      headers: { "Accept": "application/json" },
-      body: new ListData(this.listTarget)
+    fetch(`/?path_node=${event.target.id}`, {
+      headers: { "Accept": "application/json" }
     })
       .then(response => response.json())
       .then((data) => {
