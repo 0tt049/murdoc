@@ -13,16 +13,16 @@
   }
 }
 
-  #card-text {
+#card-text {
   overflow: auto;
   padding: 20px;
 }
 
 .inner-search {
   position: absolute;
-  width: 98%;
+  width: 100%;
   height: 30px;
-  bottom: 0;
+  top: 0;
   left: 0;
   right: 0;
 }
