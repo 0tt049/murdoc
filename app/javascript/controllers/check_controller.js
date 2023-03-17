@@ -2,8 +2,8 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="check"
 export default class extends Controller {
-  static targets = [ "list" ]
-  static values = { parentNodeId: Number }
+  static targets = [ "list", "path" ]
+  static values = { parentNodeId: Number, checkbox: Number }
 
   update(event) {
     // console.log(event.target.checked);
@@ -21,47 +21,53 @@ export default class extends Controller {
       })
       .then(response => response.json())
       .then((data) => {
-          // console.log(data.methods)
+          // console.log(data.methods.length)
         data.methods.forEach((method) => {
           // console.log(method.name);
           list.innerHTML += `<li><a class="text-decoration-none" data-turbo-frame="home" data-check-parent-node-id-value="${event.target.id}" href="/?parent=${event.target.id}&doc=${method.id}">${method.name}</a></li>`
           // <p><%= link_to child.name, "/?parent=#{node.id}&doc=#{child.id}", class: 'text-decoration-none', data: {turbo_frame: 'home'} %></p>
-
         })
       })
     } else {
+
       if (list.childNodes.length > 0) {
 
-
+        // console.log(list.childNodes);
         list.childNodes.forEach((child) => {
+          // console.log(child.childNodes[0]);
           console.log(child);
-
-          if (child.tagName === "LI") {
-            console.log(child.attributes);
-            // if (child.childNodes[0].dataset.checkParentNodeIdValue === event.target.id) {
-            //   child.remove();
-            // }
+          if (child.nodeName === "LI" && child.childNodes.length === 1) {
+            if (child.childNodes[0].dataset.checkParentNodeIdValue === event.target.id) {
+              setTimeout(() => child.remove(), 0);
+            }
           }
+        })
+
+      }
+
+    }
+  }
+    mark(event) {
+      // console.log(event.target.id);
+
+      // setTimeout(() =>  this.checkboxes = document.querySelectorAll('input[class="btn-check"]'), 20);
+
+      // console.log(this.pathTarget);
+      setTimeout(() => {
+        // this.checkboxes = document.querySelectorAll('.btn-check');
+        const path = this.pathTargets;
+        console.log(path);
+        // console.log(this.checkboxes);
+        console.log(path.dataset.id);
+        path.forEach((checkbox) => {
+          // console.log(checkbox.dataset.id);
+
+          // if (checkbox.id === event.target.id) {
+          //   checkbox.checked = true;
+          // }
 
         })
-      }
+      }, 1000);
     }
 
-  }
 }
-
-// <% if node.present? %>
-//   <% node.path.each do |node_path_item| %>
-//     <% node_path_item.children.where(category:['instance_method', 'method']).each do |child| %>
-//       <p><%= link_to child.name, "/?parent=#{node.id}&doc=#{child.id}", class: 'text-decoration-none', data: {turbo_frame: 'home'} %></p>
-//     <% end %>
-//   <% end %>
-// <% end %>
-
-
-
-    // <% if node.present? %>
-    //   <% node.siblings.where(category:['instance methods', 'methods']).each do |child| %>
-    //     <h2><%= child.name %></h2>
-    //   <% end %>
-    // <% end %>
