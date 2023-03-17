@@ -74,7 +74,8 @@ def make_doc
       node.save
     else
       parent = node.parent.name
-      node.documentation = %x|ri #{parent}.#{node.name}|
+      name_esc = node.name.gsub(/(?=[\]\[|*?'"`><])/, '\\')
+      node.documentation = %x|ri -fmarkdown #{parent}.#{node.name}|
       node.save
     end
   end
