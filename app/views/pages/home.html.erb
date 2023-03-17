@@ -1,7 +1,7 @@
-<div class="my-grid">
+<div class="my-grid" data-controller="check">
 
   <div data-controller="search-nodes">
-    <div class='card card-parent pt-5' style="float: left;">
+    <div class='card card-parent pt-5'>
 
       <div id='card-text' class="mb-1">
 
@@ -23,6 +23,5 @@
   </div>
 
     <%= render partial: "pages/home_content", locals: {node: @node, doc_node: @doc_node} %>
-
 
 </div>
