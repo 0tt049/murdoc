@@ -10,14 +10,14 @@ class PagesController < ApplicationController
     @node = Node.find(params[:parent]) if params[:parent].present? && Node.exists?(params[:parent])
     @doc_node = (Node.find(params[:doc]) if params[:doc].present? && Node.exists?(params[:doc])) || @node
     respond_to do |format|
-
       if turbo_frame_request? && turbo_frame_request_id == 'home'
-        format.html { render partial: "pages/home_content", locals: {node: @node, doc_node: @doc_node }}
+        format.html { render partial: "pages/home_content", locals: { node: @node, doc_node: @doc_node }}
       else
         format.html
       end
     end
 
+    @basic = Node.first
   end
 
   def download; end

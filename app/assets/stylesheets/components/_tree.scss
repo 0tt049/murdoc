@@ -1,0 +1,41 @@
+// .tree li {
+//   list-style-type:none;
+//   margin:0;
+//   padding:10px 5px 0 5px;
+//   position:relative
+// }
+// .tree li::before, .tree li::after {
+//   content:'';
+//   left:-20px;
+//   position:absolute;
+//   right:auto
+// }
+// .tree li::before {
+//   bottom:50px;
+//   height:100%;
+//   top:0;
+//   width:1px
+// }
+// .tree li::after {
+//   border-top:1px solid #999;
+//   height:20px;
+//   top:25px;
+//   width:25px
+// }
+// .tree li span:not(.glyphicon) {
+//   -moz-border-radius:5px;
+//   -webkit-border-radius:5px;
+//   border-radius:5px;
+//   display:inline-block;
+//   padding:4px 9px;
+//   text-decoration:none
+// }
+// .tree li.parent_li>span:not(.glyphicon) {
+//   cursor:pointer
+// }
+// .tree>ul>li::before, .tree>ul>li::after {
+//   border:0
+// }
+// .tree li:last-child::before {
+//   height:30px
+// }
