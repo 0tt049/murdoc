@@ -10,3 +10,9 @@
     transition: 0.2s;
   }
 }
+.card-bottom {
+  height: 61.9vh;
+}
+.card-bottom p {
+  overflow-y: scroll;
+}
