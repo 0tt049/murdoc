@@ -13,9 +13,7 @@ export default class extends Controller {
     fetch(url, {headers: {"Accept": "text/plain"}})
       .then(response => response.text())
       .then((data) => {
-        setTimeout(() => {
-          this.testeTarget.outerHTML = data
-        }, 3000)
+        this.testeTarget.outerHTML = data
       })
     // console.log(event)
   }
