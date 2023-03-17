@@ -1,8 +1,9 @@
 .my-grid {
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
-  grid-template-rows: 2fr 0fr;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr;
   grid-column-gap: 10px;
+  grid-row-gap: 0px;
   margin-left: auto;
   margin-right: auto;
   }
