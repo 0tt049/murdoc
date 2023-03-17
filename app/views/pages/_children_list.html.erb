@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <ul>
   <li><span class="caret"><%= link_to @basic.name, "/?parent=#{@basic.id}", data: {turbo_frame: 'home'} %></span>
     <ul class="nested">
@@ -50,16 +49,3 @@
     <%#= children0(@basic) %>
   </li>
 </ul>
-=======
-  <ul>
-    <% nodes.each do |node| %>
-      <li><span class="caret"><%= link_to node.name, "/?parent=#{node.id}", class: 'text-decoration-none', data: {turbo_frame: 'home'} %></span>
-        <ul class="nested">
-          <li><% node.children.where(category: "class").each do |child| %>
-            <p><%= link_to child.name, "/?parent=#{child.id}", class: 'text-decoration-none', data: {turbo_frame: 'home'} %></p>
-          <% end %></li>
-        </ul>
-      </li>
-    <% end %>
-  </ul>
->>>>>>> master
