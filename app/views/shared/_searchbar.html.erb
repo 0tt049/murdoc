@@ -1,16 +1,14 @@
 <div class="inner-search">
-  <%= form_with url: nodes_path,
+  <%= form_with url: root_path,
     method: :get,
-    html: {class: "mb-4", data: {search_nodes_target: "form"}} do |f|
+    data: {controller: "search-nodes", turbo_frame: "search" },
+    html: {class: "mb-4"} do |f|
   %>
     <%= f.text_field :query,
       class: "form-control",
       placeholder: "Search nodes",
       value: params[:query],
-      data: {
-        search_nodes_target: "input",
-        action: "keyup->search-nodes#update"
-      }
+      data: {action: "keyup->search-nodes#find"}
     %>
   <% end %>
 </div>
