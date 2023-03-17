@@ -5,41 +5,51 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: white;
+  color: #d8d8d8;
+  background-color: #172635;
 }
+
 h2, h3, h4, h5, h6, p {
   cursor: default;
 }
+
 .row {
   margin: 0;
 }
+
 // * {
 //   box-sizing: border-box;
 // }
 
 ul{
-  list-style:none;
+  list-style: none;
 }
+
 #ul{
   margin:0;
   padding:0;
 }
+
 .caret{
-  cursor:default;
-  user-select:none;
+  cursor: default;
+  user-select: none;
 }
+
 .caret::before {
-  content: "\25B6";
-  color: red;
+  content: "\21FE";
+  color: #DC0000;
   display: inline-block;
   margin-right: 5px;
 }
+
 .caret-down::before {
   transform: rotate(90deg);
 }
+
 .nested{
-  display:none;
+  display: none;
 }
+
 .active{
   display: block;
 }
@@ -49,6 +59,14 @@ ul{
 }
 
 kbd {
-  color: white;
-  background-color: black;
+  color: #d8d8d8;
+  background-color: #172635;
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+::-webkit-scrollbar-track-piece {
+  display: none;
 }
