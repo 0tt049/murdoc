@@ -1,9 +1,8 @@
-  <%= turbo_frame_tag 'home' do %>
-    <div class="d-flex">
+  <%= turbo_frame_tag 'home', class: "grid-mid-right" do %>
+
       <div class="inner-grid" data-controller="nodes-ajax" >
 
         <div class='card-doc card-mid-top'>
-
           <%= render partial: "pages/path_view", locals: { node: node} %>
         </div>
 
@@ -14,9 +13,7 @@
       </div>
 
       <div class='card card-parent' style="float: right;">
-
         <%= render partial: "pages/method_list", locals: { node: node} %>
-
       </div>
-    </div>
+
   <% end %>
