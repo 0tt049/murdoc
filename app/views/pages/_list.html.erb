@@ -1,7 +1,0 @@
-<div data-search-nodes-target="list">
-  <% nodes.each do |node| %>
-    <h2><%= node.name %></h2>
-    <% node.children.where(category: "class").each do |child| %>
-    <h2><%= child.name %></h2>
-  <% end %>
-    </div>
