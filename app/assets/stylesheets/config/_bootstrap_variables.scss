@@ -432,10 +432,10 @@ $body-color:                $gray-300 !default;
 //
 // Style anchor elements.
 
-$link-color:                              $white !default;
+$link-color:                              $dark-text-color !default;
 $link-decoration:                         none !default;
 // $link-shade-percentage:                   20% !default;
-$link-hover-color:                        $link-color !default;
+$link-hover-color:                        $white !default;
 // $link-hover-decoration:                   null !default;
 
 // $stretched-link-pseudo-element:           after !default;
