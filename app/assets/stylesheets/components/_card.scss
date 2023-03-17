@@ -1,30 +1,14 @@
-.card-murdoc {
-  // background-color: $dark-detail;
-  margin: 20px 20px 20px 0;
-  border: 0;
-  height: 40vh;
-  position: relative;
-  color: $dark-text-color;
-  &:hover {
-    background-color: $dark-hover;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-    border: 1px;
-    transition: 0.2s;
-  }
-}
-
-  #card-text {
+#card-text {
   overflow: auto;
   padding: 20px;
 }
 
 .inner-search {
   position: absolute;
-  width: 98%;
+  width: 80%;
   height: 30px;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: 0;
+  left: 30px;
 }
 
 .card-parent {
@@ -45,4 +29,11 @@
 #card-text {
   overflow: auto;
   padding: 20px;
+}
+
+.ruby-symbol {
+  font-size: 15px;
+  position: absolute;
+  top: 8px;
+  left: 14px;
 }

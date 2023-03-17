@@ -1,46 +1,23 @@
-<div class="my-grid col-md-11">
+<div class="my-grid">
 
   <div data-controller="search-nodes">
-    <div class='card card-parent' style="float: left;">
+    <div class='card card-parent pt-5' style="float: left;">
 
-      <div id='card-text'>
+      <div id='card-text' class="mb-1">
         <div data-search-nodes-target="list">
-          <ul>
-            <% @nodes.each do |node| %>
-              <li><span class="caret"><%= node.name %></span>
-                <ul class="nested">
-                  <li><% node.children.where(category: "class").each do |child| %>
-                   <p><%=child.name %></p>
-                  <% end %></li>
-                </ul>
-              </li>
-            <% end %>
-          </ul>
+        <%= render partial: "pages/children_list", locals: {nodes: @nodes} %>
         </div>
       </div>
-      <div class='inner-search' id='inner-search'>
+      <div>
         <%= render "shared/searchbar" %>
+      </div>
+      <div class="ruby-symbol">
+        <i class="devicon-ruby-plain"></i>
       </div>
 
     </div>
   </div>
-
-  <div class="inner-grid" data-controller="nodes-ajax" >
-
-    <div class='card-doc card-mid-top'>
-      <%= render partial: "pages/path_view", locals: { node: @parent} %>
-    </div>
-
-    <div class='card-doc'>
-      <%= render partial: "pages/documentation", locals: { node: @parent} %>
-    </div>
-
+  <div>
+    <%= render partial: "pages/home_content", locals: {node: @node, doc_node: @doc_node} %>
   </div>
-
-  <div class='card card-parent' style="float: right;">
-
-    <%= render partial: "pages/method_list", locals: { node: @parent} %>
-
-  </div>
-
 </div>
