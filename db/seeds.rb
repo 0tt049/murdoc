@@ -81,6 +81,16 @@ def make_doc
   end
 end
 
+def complete_doc
+  node_arr = Node.all
+  node_arr.each do |node|
+    if node.documentation == ""
+      node.documentation = missing_doc
+      node.save
+    end
+  end
+end
+
 ALLOWED_CONSTANTS = [
   "Abbrev",
   "Addrinfo",
@@ -245,8 +255,11 @@ ALLOWED_CONSTANTS = [
   "Zlib"
 ]
 
+missing_doc = "# Missing Documentation\n\nUnfortunatly this Item is lacking documentation.\nIf you would like to help the **Ruby** Language Community on\nit's documentation effort, please go to [Documentation Guide](https://docs.ruby-lang.org/en/master/contributing/documentation_guide_md.html)."
+
 root = Node.create("name" => BasicObject.name, "category" => "class")
 procreate(root.depth)
 make_modules
 make_methods
 make_doc
+complete_doc
