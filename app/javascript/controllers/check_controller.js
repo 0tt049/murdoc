@@ -2,8 +2,8 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="check"
 export default class extends Controller {
-  static targets = [ "list", "path" ]
-  static values = { parentNodeId: Number, id: Number }
+  static targets = [ "list" ]
+  static values = { parentNodeId: Number }
 
   update(event) {
     // console.log(event.target.checked);
@@ -48,23 +48,4 @@ export default class extends Controller {
     }
   }
 
-  mark(event) {
-    // console.log(event.target.id);
-
-    // setTimeout(() =>  this.checkboxes = document.querySelectorAll('input[class="btn-check"]'), 20);
-
-    // console.log(this.pathTarget);
-    setTimeout(() => {
-      // this.checkboxes = document.querySelectorAll('.btn-check');
-      const path = this.pathTargets;
-      // console.log(this.checkboxes);
-      path.forEach((checkbox) => {
-
-        if (checkbox.dataset.checkIdValue === event.target.id) {
-          checkbox.checked = true;
-        }
-
-      })
-    }, 200);
-  }
 }

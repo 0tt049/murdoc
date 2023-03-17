@@ -10,20 +10,32 @@
             <ul class="list-group">
 
               <% if node_path_item.siblings.where(category:"module").present? %>
+                <% if node_path_item.id == node.id %>
 
-                <li class="list-group-item">
+                  <li class="list-group-item">
 
-                  <input type="checkbox" class="btn-check" id=<%= node_path_item.id %> autocomplete="off" data-action="click->check#update" data-check-target="path" data-check-id-value=<%= node_path_item.id %> >
-                  <label class="btn btn-outline-danger" for=<%= node_path_item.id %>><%= node_path_item.name %></label>
+                    <input checked type="checkbox" class="btn-check" id=<%= node_path_item.id %> autocomplete="off" data-action="click->check#update">
+                    <label class="btn btn-outline-danger" for=<%= node_path_item.id %>><%= node_path_item.name %></label>
 
-                </li>
+                  </li>
+
+                <% else %>
+
+                  <li class="list-group-item">
+
+                    <input type="checkbox" class="btn-check" id=<%= node_path_item.id %> autocomplete="off" data-action="click->check#update">
+                    <label class="btn btn-outline-danger" for=<%= node_path_item.id %>><%= node_path_item.name %></label>
+
+                  </li>
+
+                <% end %>
 
                 <% node_path_item.siblings.where(category:"module").each do |n| %>
                   <% unless node_path_item.id === n.id %>
 
                     <li class="list-group-item">
 
-                      <input type="checkbox" class="btn-check" id=<%= n.id %> autocomplete="off" data-action="click->check#update" data-check-target="path" data-check-id-value=<%= n.id %> >
+                      <input type="checkbox" class="btn-check" id=<%= n.id %> autocomplete="off" data-action="click->check#update">
                       <label class="btn btn-outline-danger" for=<%= n.id %>><%= n.name %></label>
 
                     </li>
@@ -32,12 +44,25 @@
                 <% end %>
 
               <% else %>
-                <li class="list-group-item">
+                <% if node_path_item.id == node.id %>
 
-                  <input type="checkbox" class="btn-check" id=<%= node_path_item.id %> autocomplete="off" data-action="click->check#update" data-check-target="path" data-check-id-value=<%= node_path_item.id %> >
-                  <label class="btn btn-outline-danger" for=<%= node_path_item.id %>><%= node_path_item.name %></label>
+                  <li class="list-group-item">
 
-                </li>
+                    <input checked type="checkbox" class="btn-check" id=<%= node_path_item.id %> autocomplete="off" data-action="click->check#update">
+                    <label class="btn btn-outline-danger" for=<%= node_path_item.id %>><%= node_path_item.name %></label>
+
+                  </li>
+
+                <% else %>
+
+                  <li class="list-group-item">
+
+                    <input type="checkbox" class="btn-check" id=<%= node_path_item.id %> autocomplete="off" data-action="click->check#update">
+                    <label class="btn btn-outline-danger" for=<%= node_path_item.id %>><%= node_path_item.name %></label>
+
+                  </li>
+
+                <% end %>
               <% end %>
 
             </ul>
