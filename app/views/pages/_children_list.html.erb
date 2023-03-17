@@ -1,5 +1,4 @@
-
-<ul>
+<ul class="tree-view">
   <li><span class="caret"><%= link_to @basic.name, "/?parent=#{@basic.id}", data: {turbo_frame: 'home'} %></span>
     <ul class="nested">
       <% @basic.children.where(category: "class").each do |child1| %>
