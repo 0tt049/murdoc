@@ -21,3 +21,6 @@ application.register("search-nodes", SearchNodesController)
 
 import SearchSiblingsController from "./search_siblings_controller"
 application.register("search-siblings", SearchSiblingsController)
+
+import TreeView from "./treeview"
+application.register("treeview", TreeView)
