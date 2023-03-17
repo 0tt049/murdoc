@@ -7,6 +7,7 @@ class PagesController < ApplicationController
     else
       @nodes = Node.all
     end
+    @basic = @nodes.first
 
     @node = Node.find(params[:parent]) if params[:parent].present? && Node.exists?(params[:parent])
     @doc_node = (Node.find(params[:doc]) if params[:doc].present? && Node.exists?(params[:doc])) || @node
@@ -24,13 +25,10 @@ class PagesController < ApplicationController
       else
         format.html
 
-        format.text { render partial: "pages/children_list", locals: {nodes: @nodes}, formats: [:html]}
+        format.text { render partial: "pages/children_list", locals: {nodes: @nodes, basic: @basic}, formats: [:html]}
         format.json { render json: @methods }
       end
     end
-    
-    @basic = Node.first
-
   end
 
   def download; end
