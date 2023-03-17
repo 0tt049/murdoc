@@ -2,9 +2,9 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="search-nodes"
 export default class extends Controller {
-  static targets = ["form", "input", "list"]
+  static targets = ["form", "input", "teste"]
   connect() {
-    console.log(this.listTargett)
+    console.log(this.testeTarget)
     console.log(this.formTarget)
   }
 
@@ -13,7 +13,9 @@ export default class extends Controller {
     fetch(url, {headers: {"Accept": "text/plain"}})
       .then(response => response.text())
       .then((data) => {
-        this.listTarget.outerHTML = data
+        setTimeout(() => {
+          this.testeTarget.outerHTML = data
+        }, 3000)
       })
     // console.log(event)
   }

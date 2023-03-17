@@ -1,8 +1,8 @@
 
 <ul>
-  <li><span class="caret"><%= link_to @basic.name, "/?parent=#{@basic.id}", data: {turbo_frame: 'home'} %></span>
+  <li><span class="caret"><%= link_to basic.name, "/?parent=#{basic.id}", data: {turbo_frame: 'home'} %></span>
     <ul class="nested">
-      <% @basic.children.where(category: "class").each do |child1| %>
+      <% basic.children.where(category: "class").each do |child1| %>
         <li><span class="caret"><%= link_to child1.name, "/?parent=#{child1.id}", data: {turbo_frame: 'home'} %></span>
           <ul class="nested">
             <% child1.children.where(category: "class").each do |child2| %>
