@@ -3,7 +3,7 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="check"
 export default class extends Controller {
   static targets = [ "list", "path" ]
-  static values = { parentNodeId: Number, checkbox: Number }
+  static values = { parentNodeId: Number, id: Number }
 
   update(event) {
     // console.log(event.target.checked);
@@ -47,27 +47,24 @@ export default class extends Controller {
 
     }
   }
-    mark(event) {
-      // console.log(event.target.id);
 
-      // setTimeout(() =>  this.checkboxes = document.querySelectorAll('input[class="btn-check"]'), 20);
+  mark(event) {
+    // console.log(event.target.id);
 
-      // console.log(this.pathTarget);
-      setTimeout(() => {
-        // this.checkboxes = document.querySelectorAll('.btn-check');
-        const path = this.pathTargets;
-        console.log(path);
-        // console.log(this.checkboxes);
-        console.log(path.dataset.id);
-        path.forEach((checkbox) => {
-          // console.log(checkbox.dataset.id);
+    // setTimeout(() =>  this.checkboxes = document.querySelectorAll('input[class="btn-check"]'), 20);
 
-          // if (checkbox.id === event.target.id) {
-          //   checkbox.checked = true;
-          // }
+    // console.log(this.pathTarget);
+    setTimeout(() => {
+      // this.checkboxes = document.querySelectorAll('.btn-check');
+      const path = this.pathTargets;
+      // console.log(this.checkboxes);
+      path.forEach((checkbox) => {
 
-        })
-      }, 1000);
-    }
+        if (checkbox.dataset.checkIdValue === event.target.id) {
+          checkbox.checked = true;
+        }
 
+      })
+    }, 200);
+  }
 }
