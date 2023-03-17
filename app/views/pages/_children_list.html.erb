@@ -1,48 +1,50 @@
-<ul class="tree-view">
-  <li><span class="caret"><%= link_to @basic.name, "/?parent=#{@basic.id}", data: {turbo_frame: 'home'} %></span>
-    <ul class="nested">
-      <% @basic.children.where(category: "class").each do |child1| %>
-        <li><span class="caret"><%= link_to child1.name, "/?parent=#{child1.id}", data: {turbo_frame: 'home'} %></span>
-          <ul class="nested">
-            <% child1.children.where(category: "class").each do |child2| %>
-              <li><span class="caret"><%= link_to child2.name, "/?parent=#{child2.id}", data: {turbo_frame: 'home'} %></span>
-                <ul class="nested">
-                  <% child2.children.where(category: "class").each do |child3| %>
-                    <li><span class="caret"><%= link_to child3.name, "/?parent=#{child3.id}", data: {turbo_frame: 'home'} %></span>
-                      <ul class="nested">
-                        <% child3.children.where(category: "class").each do |child4| %>
-                          <li><span class="caret"><%= link_to child4.name, "/?parent=#{child4.id}", data: {turbo_frame: 'home'} %></span>
-                            <ul class="nested">
-                              <% child4.children.where(category: "class").each do |child5| %>
-                                <li><span class="caret"><%= link_to child5.name, "/?parent=#{child5.id}", data: {turbo_frame: 'home'} %></span>
-                                  <ul class="nested">
-                                    <% child5.children.where(category: "class").each do |child6| %>
-                                      <li><span class="caret"><%= link_to child6.name, "/?parent=#{child6.id}", data: {turbo_frame: 'home'} %></span>
-                                        <ul class="nested">
-                                          <% child6.children.where(category: "class").each do |child7| %>
-                                            <li><span class="caret"><%= link_to child7.name, "/?parent=#{child7.id}", data: {turbo_frame: 'home'} %></span></li>
-                                          <% end %>
-                                        </ul>
-                                      </li>
-                                    <% end %>
-                                  </ul>
-                                </li>
-                              <% end %>
-                            </ul>
-                          </li>
-                        <% end %>
-                      </ul>
-                    </li>
-                  <% end %>
-                </ul>
-              </li>
-            <% end %>
-          </ul>
-        </li>
-      <% end %>
-    </ul>
-  </li>
-</ul>
+<div id="test" class="tree">
+  <ul class="tree-view">
+    <li class="parent_li"><span class="caret"><%= link_to @basic.name, "/?parent=#{@basic.id}", data: {turbo_frame: 'home'} %></span>
+      <ul class="nested">
+        <% @basic.children.where(category: "class").each do |child1| %>
+          <li class="parent_li"><span class="caret"><%= link_to child1.name, "/?parent=#{child1.id}", data: {turbo_frame: 'home'} %></span>
+            <ul class="nested">
+              <% child1.children.where(category: "class").each do |child2| %>
+                <li class="parent_li"><span class="caret"><%= link_to child2.name, "/?parent=#{child2.id}", data: {turbo_frame: 'home'} %></span>
+                  <ul class="nested">
+                    <% child2.children.where(category: "class").each do |child3| %>
+                      <li class="parent_li"><span class="caret"><%= link_to child3.name, "/?parent=#{child3.id}", data: {turbo_frame: 'home'} %></span>
+                        <ul class="nested">
+                          <% child3.children.where(category: "class").each do |child4| %>
+                            <li class="parent_li"><span class="caret"><%= link_to child4.name, "/?parent=#{child4.id}", data: {turbo_frame: 'home'} %></span>
+                              <ul class="nested">
+                                <% child4.children.where(category: "class").each do |child5| %>
+                                  <li class="parent_li"><span class="caret"><%= link_to child5.name, "/?parent=#{child5.id}", data: {turbo_frame: 'home'} %></span>
+                                    <ul class="nested">
+                                      <% child5.children.where(category: "class").each do |child6| %>
+                                        <li class="parent_li"><span class="caret"><%= link_to child6.name, "/?parent=#{child6.id}", data: {turbo_frame: 'home'} %></span>
+                                          <ul class="nested">
+                                            <% child6.children.where(category: "class").each do |child7| %>
+                                              <li class="parent_li"><span class="caret"><%= link_to child7.name, "/?parent=#{child7.id}", data: {turbo_frame: 'home'} %></span></li>
+                                            <% end %>
+                                          </ul>
+                                        </li>
+                                      <% end %>
+                                    </ul>
+                                  </li>
+                                <% end %>
+                              </ul>
+                            </li>
+                          <% end %>
+                        </ul>
+                      </li>
+                    <% end %>
+                  </ul>
+                </li>
+              <% end %>
+            </ul>
+          </li>
+        <% end %>
+      </ul>
+    </li>
+  </ul>
+</div>
 
 <%# <ul> %>
   <%# <li><span class="caret"><%= link_to @basic.name, "/?parent=#{@basic.id}", data: {turbo_frame: 'home'} %></span>
