@@ -14,5 +14,9 @@
   height: 61.9vh;
 }
 .card-bottom p {
-  overflow-y: scroll;
+  overflow-y: auto;
+  height: 56vh;
+  padding-right: 20px;
+  text-align: left;
+  text-justify: inter-word;
 }
