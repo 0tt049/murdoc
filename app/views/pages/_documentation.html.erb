@@ -1,5 +1,7 @@
-<%= turbo_frame_tag 'home' do  %>
-  <% if doc_node.respond_to?(:documentation) %>
-    <%= doc_node.documentation %>
+  <%= turbo_frame_tag 'home', class: "card-doc-text" do  %>
+    <% if doc_node.respond_to?(:documentation) %>
+      <p>
+        <%= doc_node.documentation %>
+      </p>
+    <% end %>
   <% end %>
-<% end %>
