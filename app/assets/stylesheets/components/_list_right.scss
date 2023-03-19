@@ -3,4 +3,32 @@
   padding: 0 20px 20px 0;
   margin: 12px 8px;
   display: grid;
+
+  a {
+    padding: 12px;
+    display: block;
+    // border-radius: 8px;
+    &:hover {
+      color: #fff;
+      transition: .2s;
+      background-color: #1b2d3eac;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    }
+    &.active {
+      color: $murdoc-red;
+      background-color: #c3daff;
+      border-radius: 5px;
+    }
+  }
+
+  li {
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+    &:last-child {
+      border-bottom: none;
+    }
+    &:first-child {
+      border-top: none;
+    }
+  }
+
 }
