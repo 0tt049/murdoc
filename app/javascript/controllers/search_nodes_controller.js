@@ -3,10 +3,10 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="search-nodes"
 export default class extends Controller {
   static targets = ["form", "input", "teste"]
-  connect() {
-    console.log(this.testeTarget)
-    console.log(this.formTarget)
-  }
+  // connect() {
+  //   console.log(this.testeTarget)
+  //   console.log(this.formTarget)
+  // }
 
   find() {
     const url = `${this.formTarget.action}?query=${this.inputTarget.value}`
