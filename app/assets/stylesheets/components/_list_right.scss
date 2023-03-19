@@ -1,8 +1,10 @@
 .list-right {
   overflow: auto;
-  padding: 0 20px 20px 0;
+  border-radius: 8px;
   margin: 12px 8px;
   display: grid;
+  padding: 0 8px 0 8px;
+  // padding-left: 0;
 
   a {
     padding: 12px;
