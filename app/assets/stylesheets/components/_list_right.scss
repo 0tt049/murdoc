@@ -10,10 +10,12 @@
     border: none;
     background-color: $dark-background;
     color: $dark-text-color;
-    padding: 12px 0;
+    padding: 18px 0;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    border: 1px solid #c3daff00;
     border-radius: 5px;
     &:hover {
+      border: 1px solid #c3daffc6;
       color: #fff;
       transition: .2s;
       // background-color: #1b2d3eac;
@@ -24,24 +26,23 @@
   .show {
     margin: 0 4px;
     z-index: 0;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
     // background-color: $dark-hover;
-    padding: 5px;
     border-radius: 0 0 5px 5px;
     margin-bottom: 5px;
   }
   .collapsing {
     margin: 0 4px;
     z-index: 0;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
     // background-color: $dark-hover;
-    padding: 5px;
     border-radius: 0 0 5px 5px;
     margin-bottom: 5px;
   }
+  &:hover .show, .collapsing {
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+  }
 
   a {
-    padding: 12px;
+    padding: 16px;
     display: block;
     // border-radius: 8px;
     &:hover {
@@ -54,6 +55,9 @@
       color: $murdoc-red;
       background-color: #c3daff;
       border-radius: 5px;
+    }
+    &:last-child {
+      border-radius: 0 0 5px 5px;
     }
   }
 
