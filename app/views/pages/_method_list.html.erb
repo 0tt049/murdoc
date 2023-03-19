@@ -1,5 +1,5 @@
 <% if node.present? %>
-  <ul class="list-right" data-check-target="list">
+  <ul id="card-text" data-check-target="list">
     <% node.path.each do |node_path_item| %>
 
       <% node_path_item.children.where(category:['instance_method', 'method']).each do |child| %>
