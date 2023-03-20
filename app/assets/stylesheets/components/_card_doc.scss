@@ -1,7 +1,6 @@
 .card-doc {
   background-color: $dark-detail;
   border-radius: 15px;
-  padding: 20px;
   border: 1px solid $light-gray;
   color: $dark-text-color;
   &:hover {
@@ -12,12 +11,14 @@
   }
 }
 .card-bottom {
-  height: 61.9vh;
+  height: 61.8vh;
+  padding: 20px;
+
 }
 .card-bottom p {
   overflow-y: auto;
   height: 56vh;
-  padding-right: 20px;
+  padding-right: 15px;
   text-align: left;
   text-justify: inter-word;
 }
