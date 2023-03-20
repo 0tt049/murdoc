@@ -1,6 +1,9 @@
 .path-view {
-  flex: none;
+
   margin: auto;
+  height: 200px;
+  overflow: auto;
+  width: 460px;
 }
 // .path-view .reset-btn {
 //   position: fixed;
@@ -9,6 +12,11 @@
 //   // position at bottom right of path-view
 
 // }
+
+.path-view .breadcrumb {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
 
  .path-view .btn-outline-danger {
   --bs-btn-active-color: white;
