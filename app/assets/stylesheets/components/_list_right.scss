@@ -1,3 +1,6 @@
 .list-right {
-  overflow-y: auto;
+  overflow: auto;
+  padding: 0 20px 20px 0;
+  margin: 12px 8px;
+  display: grid;
 }

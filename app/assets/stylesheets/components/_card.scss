@@ -4,11 +4,6 @@
   }
 }
 
-#card-text {
-  overflow: auto;
-  padding: 20px;
-}
-
 .inner-search {
   position: absolute;
   width: 80%;
@@ -37,7 +32,8 @@
 
 #card-text {
   overflow: auto;
-  padding: 20px;
+  padding: 0 20px 20px 0;
+  margin: 12px 8px;
 }
 
 .ruby-symbol {

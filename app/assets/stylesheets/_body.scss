@@ -54,19 +54,37 @@ ul{
   display: block;
 }
 
-::-webkit-scrollbar-track {
-  display: none;
-}
-
 kbd {
   color: #d8d8d8;
   background-color: #172635;
 }
 
+//* Scrollbar styling: *//
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
 ::-webkit-scrollbar-track {
+  // background: #a23d;
   display: none;
 }
 
-::-webkit-scrollbar-track-piece {
+/* Corner */
+::-webkit-scrollbar-corner {
   display: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $dark-background;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $dark-detail
 }
