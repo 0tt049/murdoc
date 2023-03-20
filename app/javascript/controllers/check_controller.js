@@ -28,7 +28,7 @@ export default class extends Controller {
 
           data.methods.forEach((method) => {
             // console.log(method.name);
-            list.innerHTML += `<li><a class="text-decoration-none" data-turbo-frame="home" data-check-parent-node-id-value="${event.target.id}" href="/?parent=${event.target.id}&doc=${method.id}">${method.name}</a></li>`
+            list.innerHTML += `<li><a class="text-decoration-none" data-turbo-frame="documentation" data-teste= "teste" data-check-parent-node-id-value="${event.target.id}" href="/?parent=${event.target.id}&doc=${method.id}">${method.name}</a></li>`
             // <p><%= link_to child.name, "/?parent=#{node.id}&doc=#{child.id}", class: 'text-decoration-none', data: {turbo_frame: 'home'} %></p>
           })
 
