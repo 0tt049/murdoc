@@ -80,11 +80,11 @@ kbd {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: $dark-background;
+  background: #172635;
   border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: $dark-detail
+  background: #1B2D3E;
 }
