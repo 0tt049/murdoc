@@ -1,6 +1,75 @@
 .list-right {
   overflow: auto;
-  padding: 0 20px 20px 0;
+  border-radius: 8px;
   margin: 12px 8px;
   display: grid;
+  padding: 0 8px 0 8px;
+  // padding-left: 0;
+  button {
+    z-index: 1;
+    border: none;
+    background-color: $dark-background;
+    color: $dark-text-color;
+    padding: 18px 0;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    border: 1px solid #c3daff00;
+    border-radius: 5px;
+    &:hover {
+      border: 1px solid #c3daffc6;
+      color: #fff;
+      transition: .2s;
+      // background-color: #1b2d3eac;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .show {
+    margin: 0 4px;
+    z-index: 0;
+    // background-color: $dark-hover;
+    border-radius: 0 0 5px 5px;
+    margin-bottom: 5px;
+  }
+  .collapsing {
+    margin: 0 4px;
+    z-index: 0;
+    // background-color: $dark-hover;
+    border-radius: 0 0 5px 5px;
+    margin-bottom: 5px;
+  }
+  &:hover .show, .collapsing {
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+  }
+
+  a {
+    padding: 16px;
+    display: block;
+    // border-radius: 8px;
+    &:hover {
+      color: #fff;
+      transition: .2s;
+      background-color: #1b2d3eac;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    }
+    &.active {
+      color: $murdoc-red;
+      background-color: #c3daff;
+      border-radius: 5px;
+    }
+    &:last-child {
+      border-radius: 0 0 5px 5px;
+    }
+  }
+
+  li {
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+    &:last-child {
+      border-bottom: none;
+      border-radius: 0 0 5px 5px;
+    }
+    &:first-child {
+      border-top: none;
+    }
+  }
+
 }
