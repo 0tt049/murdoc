@@ -1,0 +1,22 @@
+<div id="<%= node.id %>">
+
+  <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="true" aria-controls="collapseExample">
+    <%= node.name %>
+  </button>
+
+  <div class="collapse show" id="collapseExample">
+
+    <% node.children.where(category:['instance_method', 'method']).each do |child| %>
+
+      <%# node_path_item.children.where(category:['instance_method', 'method']).each do |child| %>
+
+      <li>
+        <%= link_to child.name, "/?parent=#{node.id}&doc=#{child.id}", class: 'text-decoration-none', data: {turbo_frame: 'home', check_parent_node_id_value: node.id } %>
+      </li>
+
+      <%# end %>
+    <% end %>
+
+  </div>
+
+</div>

@@ -21,11 +21,11 @@ class PagesController < ApplicationController
     respond_to do |format|
 
       if turbo_frame_request? && turbo_frame_request_id == 'home'
-        format.html { render partial: "pages/home_content", locals: { node: @node, doc_node: @doc_node }}
+        format.html { render partial: "pages/home_content", locals: { node: @node, doc_node: @doc_node } }
       else
         format.html
 
-        format.text { render partial: "pages/children_list", locals: {nodes: @nodes, basic: @basic}, formats: [:html]}
+        format.text { render partial: "pages/children_list", locals: { nodes: @nodes, basic: @basic }, formats: [:html] }
         format.json { render json: @methods }
       end
     end
