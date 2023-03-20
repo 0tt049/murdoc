@@ -11,10 +11,15 @@
   }
 }
 .card-bottom {
-  height: 61.9vh;
+  height: 100%;
+  padding: 12px;
   // &:hover p {
   //   background-color: $dark-background;
   // }
+  @media (max-width: 995px) {
+    // padding: 0;
+    height: 96%;
+  }
 
 }
 .card-bottom p {

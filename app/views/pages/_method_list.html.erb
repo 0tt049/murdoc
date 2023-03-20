@@ -1,29 +1,8 @@
 <% if node.present? %>
   <ul class="list-right" data-check-target="list">
 
-    <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="true" aria-controls="collapseExample">
-      <%= node.name %>
-    </button>
+    <%= render partial: "pages/method_element", locals: { node: node} %>
 
-
-  <%# <div class="card card-body">
-    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-  </div> %>
-
-    <div class="collapse show" id="collapseExample">
-
-      <% node.children.where(category:['instance_method', 'method']).each do |child| %>
-
-        <%# node_path_item.children.where(category:['instance_method', 'method']).each do |child| %>
-
-        <li>
-          <%= link_to child.name, "/?parent=#{node.id}&doc=#{child.id}", class: 'text-decoration-none', data: {turbo_frame: 'documentation', check_parent_node_id_value: node.id } %>
-        </li>
-
-        <%# end %>
-      <% end %>
-
-    </div>
 
   </ul>
 <% end %>
