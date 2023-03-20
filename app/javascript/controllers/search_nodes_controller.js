@@ -1,4 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
+import { activateTreeview } from "./treeview"
 
 // Connects to data-controller="search-nodes"
 export default class extends Controller {
@@ -13,7 +14,8 @@ export default class extends Controller {
     fetch(url, {headers: {"Accept": "text/plain"}})
       .then(response => response.text())
       .then((data) => {
-        this.testeTarget.outerHTML = data
+        this.testeTarget.innerHTML = data
+        activateTreeview()
       })
     // console.log(event)
   }
