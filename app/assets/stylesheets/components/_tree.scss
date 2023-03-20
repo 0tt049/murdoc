@@ -51,7 +51,7 @@
   border:0
 }
 .tree li:last-child::before {
-  // height:30px
+  height:25px
 }
 .tree li.parent_li>span:not(.glyphicon):hover, .tree li.parent_li>span:not(.glyphicon):hover+ul li span:not(.glyphicon) {
   // background:#eee;
