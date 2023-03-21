@@ -31,10 +31,11 @@
   }
 }
 
-.sidebar:hover .logo {
+.sidebar .logo img {
   // text-shadow: 1px 1px 0 rgba(255, 255, 255, 1);
   color: #f20101;
   text-decoration: none;
+  height: 75px;
 }
 
 .sidebar:hover {
