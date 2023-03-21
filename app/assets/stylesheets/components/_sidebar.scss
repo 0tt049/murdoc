@@ -52,14 +52,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 23vh;
+  margin-top: 20vh;
 }
 
 .side-item {
   margin: 22px auto;
   span {
     display: none;
-  }
+  };
+  font-size: 25px;
 }
 
 .sidebar .side-item a:hover {
