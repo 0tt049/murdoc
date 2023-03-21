@@ -1,0 +1,41 @@
+.card-box {
+  font-size: 15px;
+
+  // cursor: pointer;
+  position: relative;
+
+  &:hover {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+}
+
+.card-popup {
+  box-sizing: border-box;
+  position: absolute;
+  // top: 30px;
+  // left: 30px;
+  z-index: 1;
+  background-color: $dark-detail;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid $light-gray;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  display: none;
+
+  p {
+    color: $dark-text-color;
+    margin: 0;
+  }
+
+  &:hover {
+    opacity: 0%;
+  }
+
+}
+
+
+.card-box:hover .card-popup {
+  display: block;
+  transition: 0.2s;
+}
