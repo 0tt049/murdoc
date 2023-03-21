@@ -38,6 +38,7 @@
 .card-box:hover .card-popup {
   display: block;
   transition: 0.2s;
+
 }
 
 .tree {
@@ -60,6 +61,19 @@
 
   i {
     font-size: 20px;
+    color: $murdoc-red;
+    &:hover {
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0 20px rgb(220, 0, 0);
+      transition: .1s;
+      background-color: $murdoc-red;
+      color: $dark-text-color;
+      border: 2px solid $murdoc-red;
+      border-radius: 50%;
+      padding: 10px;
+      transition: transform 0.3s 2;
+      transform: translate(3px, 0px);
+    }
   }
 
   .card-popup {
@@ -67,7 +81,28 @@
     // display: flex;
     position: absolute;
     top: -105px;
-    left: 20px;
+    left: 40px;
     width: 330px;
   }
 }
+
+
+
+// .sidebar .side-item a:hover {
+//   text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+//   box-shadow: 0 0 20px rgb(220, 0, 0);
+//   transition: .1s;
+//   background-color: $murdoc-red;
+//   color: $dark-text-color;
+//   border: 2px solid $murdoc-red;
+//   border-radius: 50%;
+//   padding: 10px;
+//   transition: transform 0.3s 2;
+//   transform: translate(3px, 0px);
+// }
+
+
+// .sidebar .side-item:hover {
+//     transition: transform 0.3s ease;
+//     transform: translateX(5px) translateY(0px);
+// }
