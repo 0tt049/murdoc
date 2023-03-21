@@ -40,6 +40,19 @@
   transition: 0.2s;
 }
 
+.tree {
+  .card-popup {
+    // display: flex;
+    width: 150px;
+  }
+}
+
+.path {
+  position: absolute;
+  right: 255px;
+  top: 12px;
+}
+
 .info {
   position: absolute;
   bottom: 35px;
@@ -50,11 +63,11 @@
   }
 
   .card-popup {
-    box-sizing: content-box;
     z-index: 2;
-    display: block;
+    // display: flex;
     position: absolute;
-    top: -370px;
-    left: 25px;
+    top: -105px;
+    left: 20px;
+    width: 330px;
   }
 }
