@@ -1,11 +1,30 @@
 .about-text {
+
   overflow: scroll;
   position: absolute;
   top: 0;
-  img {
-    height: 200px;
+
+  .gif img {
+    height: 300px;
   }
-  // .gif-div {
-  //   height: 150px;
-  // }
+
+  .st-img img {
+    height: 350px;
+  }
+
+  kbd {
+    background-color: $dark-detail;
+    border: 1px solid $light-gray;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px $dark-detail inset;
+    color: $dark-text-color;
+    display: inline-block;
+    font: 14px/1 "Droid Sans Mono", "Monaco", monospace;
+    height: auto;
+    margin: 0 .1em;
+    padding: .2em .6em;
+    text-shadow: 0 1px 0 $dark-detail;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
 }
