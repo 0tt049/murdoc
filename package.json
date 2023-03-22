@@ -7,7 +7,7 @@
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.3",
     "debounce": "^1.2.1",
-    "webpack": "^5.75.0",
+    "webpack": "^5.76.0",
     "webpack-cli": "^5.0.1"
   },
   "scripts": {
