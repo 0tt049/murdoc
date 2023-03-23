@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   get "about", to: "pages#about"
 
   resources :nodes, only: %i[index show]
-  resources :bookmarks, only: %i[index create destroy]
+  # resources :bookmarks, only: %i[index create destroy]
 end
