@@ -11,7 +11,8 @@ A new and improved way of looking for Ruby's documentation
 ![ISSUES](https://img.shields.io/github/issues/0tt049/murdoc?style=flat-square)
 ![Contributors](https://img.shields.io/github/contributors/0tt049/murdoc?style=flat-square)
 
-![Send us some love](https://img.shields.io/github/stars/0tt049/murdoc?label=star%20me%20up%20%3A%29&style=for-the-badge)
+[![Send us some love](https://img.shields.io/github/stars/0tt049/murdoc?label=star%20me%20up%20%3A%29&style=for-the-badge)](https://www.github.com/0tt049/murdoc/stargazers)
+
 ##### *obligatory screenshot*
 
 ![screenshot](https://raw.githubusercontent.com/0tt049/murdoc/master/Screenshot_20230322_191943.png)
