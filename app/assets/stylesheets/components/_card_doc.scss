@@ -13,6 +13,7 @@
 .card-bottom {
   height: 65.7%;
   padding: 12px;
+  max-width: 530;
   // &:hover p {
   //   background-color: $dark-background;
   // }
@@ -34,11 +35,13 @@
 
 
 }
-.card-bottom p {
+.card-bottom pre {
   // position: relative;
-  overflow-y: auto;
+  overflow: scroll;
+  max-width: 530px;
+  overflow-wrap: break-word;
   height: 90%;
-  padding-right: 15px;
+  padding: 15px;
   text-align: left;
   text-justify: inter-word;
   // @media (max-width: 995px) {
