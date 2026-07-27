@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   def home
     if params[:query].present?
-      @nodes = Node.where("name ILIKE ?", "%#{params[:query]}%")
+      @nodes = Node.where("name ILIKE ?", "%#{params[:query]}%").order(Arel.sql("CASE WHEN name = ? THEN 0 ELSE 1 END, name"))
     else
       @nodes = Node.all
     end
